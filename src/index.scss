@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 19px;
+}
+
+:root {
+  //_Colors:
+  --blue: #1b3764;
+  --yellow: #ffca42;
+  --white: #f6f8fc;
+  --grey: #969aa0;
+
+  //_Font:
+}
+
+//_Titles:
+h1 {
+  font-size: 3.421rem;
+}
+h2 {
+  font-size: 2.895rem;
+}
+h3 {
+  font-size: 2.368rem;
+}
+h4 {
+  font-size: 1.684rem;
+}
+h5 {
+  font-size: 1.263rem;
+}
+h6 {
+  font-size: 1.158rem;
+}
+
+/* 
+
+Cardo bold  Regular
+
+Inter extra-bold bold Semi Bold medium regular
+*/
