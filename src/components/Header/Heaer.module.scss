@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  &__logoWrap {
+    display: flex;
+    align-items: center;
+    column-gap: 33px;
+  }
+  &__socialLinksWrap {
+    display: flex;
+    column-gap: 10px;
+  }
+  &__header__navbarWrap {
+  }
+}

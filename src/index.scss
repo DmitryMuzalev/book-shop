@@ -7,14 +7,37 @@
   font-size: 19px;
 }
 
+html,
+body {
+  font-size: 19px;
+}
+
+body {
+  background-color: var(--blue);
+  //!Временные стили
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
 :root {
   //_Colors:
   --blue: #1b3764;
+  --blue-light: #f4f8ff;
   --yellow: #ffca42;
-  --white: #f6f8fc;
+  --white: #ffffff;
+  --beige: #f6f8fc;
   --grey: #969aa0;
 
-  //_Font:
+  //_Fonts:
+  --f-family-primary: 'Inter', sans-serif;
+  --f-family-secondary: 'Cardo', serif;
 }
 
 //_Titles:
@@ -37,9 +60,46 @@ h6 {
   font-size: 1.158rem;
 }
 
-/* 
+.container {
+  display: block;
+  max-width: 1300px;
+  margin: 0 auto;
+  @media (max-width: 991px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
 
-Cardo bold  Regular
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  font-size: 16px;
+  transition: all 0.3s;
 
-Inter extra-bold bold Semi Bold medium regular
-*/
+  @media (max-width: 479px) {
+    width: 40px;
+    height: 40px;
+  }
+  &_w {
+    color: var(--blue);
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    &:hover {
+      background-color: var(--yellow);
+      border-color: var(--yellow);
+    }
+  }
+  &_b {
+    color: var(--white);
+    border: 2px solid var(--yellow);
+    background-color: transparent;
+    &:hover {
+      background-color: var(--yellow);
+    }
+  }
+}
