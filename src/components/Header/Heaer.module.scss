@@ -11,6 +11,17 @@
     display: flex;
     column-gap: 10px;
   }
-  &__header__navbarWrap {
+  &__navbarWrap {
+    display: flex;
+    align-items: center;
+    nav {
+    }
+  }
+  &__btn {
+    margin-left: 12px;
+    padding: 13px 33px;
+    &:hover {
+      color: var(--white);
+    }
   }
 }

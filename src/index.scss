@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 19px;
 }
 
 html,
@@ -20,6 +19,7 @@ body {
 
 a {
   text-decoration: none;
+  font-family: var(--f-family-primary);
 }
 
 img {
@@ -38,6 +38,12 @@ img {
   //_Fonts:
   --f-family-primary: 'Inter', sans-serif;
   --f-family-secondary: 'Cardo', serif;
+
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
 }
 
 //_Titles:
@@ -60,6 +66,7 @@ h6 {
   font-size: 1.158rem;
 }
 
+//_Containers:
 .container {
   display: block;
   max-width: 1300px;
@@ -72,6 +79,36 @@ h6 {
   }
 }
 
+//_Buttons::
+.btn {
+  cursor: pointer;
+  font-size: 19px;
+  font-family: var(--f-family-secondary);
+  text-transform: capitalize;
+  line-height: 125%;
+  font-weight: var(--bold);
+  letter-spacing: 0.38px;
+  padding: 20px 56px;
+  background-color: var(--yellow);
+  color: var(--blue);
+  border: 2px solid var(--yellow);
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: transparent;
+  }
+  &_transparent {
+    background-color: transparent;
+    &:hover {
+      background-color: var(--yellow);
+    }
+  }
+  &_large {
+    padding: 20px 96px;
+  }
+}
+
+//_Social network link:
 .socialLink {
   display: flex;
   align-items: center;
@@ -101,5 +138,17 @@ h6 {
     &:hover {
       background-color: var(--yellow);
     }
+  }
+}
+
+//_Shopping cart button
+.shoppingCartButton {
+  font-size: 17px;
+  padding: 9px 15px;
+  margin-right: 18px;
+  color: var(--white);
+  transition: all 0.3s;
+  &:hover {
+    color: var(--yellow);
   }
 }
