@@ -2,20 +2,18 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
-  &__logoWrap {
+  &__logo-wrap {
     display: flex;
     align-items: center;
     column-gap: 33px;
   }
-  &__socialLinksWrap {
+  &__social-links-wrap {
     display: flex;
     column-gap: 10px;
   }
-  &__navbarWrap {
+  &__nav-menu-wrap {
     display: flex;
     align-items: center;
-    nav {
-    }
   }
   &__btn {
     margin-left: 12px;

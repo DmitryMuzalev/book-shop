@@ -109,7 +109,7 @@ h6 {
 }
 
 //_Social network link:
-.socialLink {
+.social-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,12 +142,71 @@ h6 {
 }
 
 //_Shopping cart button
-.shoppingCartButton {
+.shopping-cart-button {
+  position: relative;
   font-size: 17px;
   padding: 9px 15px;
   margin-right: 18px;
   color: var(--white);
   transition: all 0.3s;
+
+  svg {
+    margin-right: 8px;
+  }
+
+  &__count {
+    position: absolute;
+    top: 0;
+    right: 6%;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 9px;
+    height: 18px;
+    line-height: 18px;
+    min-width: 18px;
+    margin-left: 8px;
+    background-color: var(--yellow);
+    font-size: 12px;
+    font-weight: var(--bold);
+    color: var(--blue);
+    text-align: center;
+  }
+  &:hover {
+    color: var(--yellow);
+  }
+}
+
+//_Navigation menu:
+.nav-menu {
+  display: flex;
+  align-items: center;
+  &__link {
+    font-size: 17px;
+    padding: 1.4em 1.18em;
+    color: var(--white);
+    font-weight: var(--medium);
+    transition: all 0.3s;
+    //! Временные стили:
+    &[data-active] {
+      color: var(--yellow);
+    }
+    //!
+    &:hover {
+      color: var(--yellow);
+    }
+  }
+}
+
+//_Dropdown toggle:
+.dropdown-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: var(--f-family-primary);
+  column-gap: 5px;
+  svg {
+    margin-top: 3px;
+  }
   &:hover {
     color: var(--yellow);
   }
