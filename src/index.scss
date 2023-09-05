@@ -12,9 +12,6 @@ body {
 }
 
 body {
-  background-color: var(--blue);
-  //!Временные стили
-  color: var(--white);
 }
 
 a {
@@ -28,6 +25,7 @@ img {
 
 :root {
   //_Colors:
+  --black: #141414;
   --blue: #1b3764;
   --blue-light: #f4f8ff;
   --yellow: #ffca42;
@@ -69,11 +67,9 @@ h6 {
 //_Containers:
 .container {
   display: block;
-  max-width: 1300px;
+  max-width: 1360px;
   margin: 0 auto;
-  @media (max-width: 991px) {
-    padding: 0 30px;
-  }
+  padding: 0 30px;
   @media (max-width: 767px) {
     padding: 0 20px;
   }
@@ -146,10 +142,11 @@ h6 {
   position: relative;
   font-size: 17px;
   padding: 9px 15px;
+  margin-top: 5px;
   margin-right: 18px;
   color: var(--white);
   transition: all 0.3s;
-
+  line-height: 1;
   svg {
     margin-right: 8px;
   }
@@ -193,6 +190,10 @@ h6 {
     //!
     &:hover {
       color: var(--yellow);
+    }
+
+    @media (max-width: 1280px) {
+      font-size: 16px;
     }
   }
 }
