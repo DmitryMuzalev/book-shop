@@ -9,6 +9,7 @@ import {
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavigationMenu } from '../NavigationMenu/NavigationMenu';
+import { AnimatePresence } from 'framer-motion';
 
 function Header() {
   const stylesHeaderButton = clsx('btn', 'header__btn');
@@ -64,12 +65,14 @@ function Header() {
             </div>
           </div>
 
-          {isTabletOrMobile && isShowNavMenu && (
-            <NavigationMenu
-              toggleDropMenu={toggleDropMenu}
-              isShowDropMenu={isShowDropMenu}
-            />
-          )}
+          <AnimatePresence>
+            {isTabletOrMobile && isShowNavMenu && (
+              <NavigationMenu
+                toggleDropMenu={toggleDropMenu}
+                isShowDropMenu={isShowDropMenu}
+              />
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </header>

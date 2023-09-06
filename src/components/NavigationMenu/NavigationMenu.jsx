@@ -1,8 +1,15 @@
+import { motion } from 'framer-motion';
 import { FaAngleDown } from 'react-icons/fa';
 
 function NavigationMenu({ toggleDropMenu, isShowDropMenu }) {
   return (
-    <nav className="nav-menu header__nav-menu">
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="nav-menu header__nav-menu"
+    >
       <a className="nav-menu__link" href="#!" data-active="true">
         Home
       </a>
@@ -52,7 +59,7 @@ function NavigationMenu({ toggleDropMenu, isShowDropMenu }) {
       <a className="nav-menu__link" href="#!">
         Contact
       </a>
-    </nav>
+    </motion.nav>
   );
 }
 export { NavigationMenu };
