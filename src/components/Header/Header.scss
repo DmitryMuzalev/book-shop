@@ -1,6 +1,7 @@
 .header {
   background-color: var(--blue);
   &__header-wrap {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 40px 0;
@@ -35,12 +36,6 @@
     position: relative;
     display: flex;
     align-items: center;
-  }
-  &__nav-menu {
-    flex-wrap: wrap;
-    @media (max-width: 991px) {
-      display: none;
-    }
   }
   &__btn {
     margin-left: 12px;
@@ -80,6 +75,9 @@
         width: 15px;
         height: 3px;
         background-color: var(--white);
+      }
+      &[data-active='true'] {
+        background-color: var(--black);
       }
     }
   }
