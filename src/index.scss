@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background-color: var(--blue);
+  // background-color: var(--blue);
 }
 
 a {
@@ -28,6 +28,7 @@ img {
   //_Colors:
   --black: #141414;
   --blue: #1b3764;
+  --blue-middle: #b4c7e7;
   --blue-light: #f4f8ff;
   --yellow: #ffca42;
   --white: #ffffff;
@@ -198,6 +199,7 @@ h6 {
     }
   }
   @media (max-width: 991px) {
+    z-index: 5;
     position: absolute;
     bottom: 0;
     left: 0;

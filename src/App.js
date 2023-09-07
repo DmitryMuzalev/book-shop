@@ -1,9 +1,19 @@
 import { Header } from './components/Header/Header';
+import { PreviewArea } from './components/PreviewArea/PreviewArea';
 
 function App() {
   return (
     <>
-      <Header />
+      <div
+        style={{
+          backgroundColor: 'var(--blue)',
+        }}
+      >
+        <div className="container">
+          <Header />
+          <PreviewArea />
+        </div>
+      </div>
     </>
   );
 }

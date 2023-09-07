@@ -1,5 +1,4 @@
 .header {
-  background-color: var(--blue);
   &__header-wrap {
     position: relative;
     display: flex;
@@ -36,6 +35,9 @@
     position: relative;
     display: flex;
     align-items: center;
+    @media (max-width: 991px) {
+      height: 60px;
+    }
   }
   &__btn {
     margin-left: 12px;
