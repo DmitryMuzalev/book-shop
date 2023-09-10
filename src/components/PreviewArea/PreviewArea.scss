@@ -156,15 +156,6 @@
   display: flex;
   column-gap: 10px;
   padding-bottom: 20px;
-  &__marker {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    background-color: var(--yellow);
-    margin-top: 4px;
-  }
-
   &__content-wrap {
   }
 
@@ -184,6 +175,4 @@
     color: var(--blue-middle);
     line-height: 170%;
   }
-}
-.marker {
 }

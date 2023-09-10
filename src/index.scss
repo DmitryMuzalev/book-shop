@@ -24,6 +24,10 @@ img {
   max-width: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 :root {
   //_Colors:
   --black: #141414;
@@ -47,6 +51,15 @@ img {
 }
 
 //_Titles:
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--f-family-secondary);
+  text-transform: capitalize;
+}
 h1 {
   font-size: 3.421rem;
 }
@@ -296,5 +309,103 @@ h6 {
   @media (max-width: 767px) {
     grid-template-columns: 100%;
     row-gap: 30px;
+  }
+}
+
+//_Marker:
+.marker {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: var(--yellow);
+  margin-top: 4px;
+}
+
+//_Section title:
+.section-title {
+  text-align: center;
+  &_left {
+    text-align: left;
+  }
+  &__text {
+    font-size: 42px;
+    font-weight: var(--bold);
+    text-transform: capitalize;
+    color: var(--blue);
+    line-height: 1.2;
+  }
+  &__line {
+    display: inline-block;
+    width: 50px;
+    height: 3px;
+    margin-top: 20px;
+    background-color: var(--yellow);
+    &_b {
+      background-color: var(--blue);
+    }
+  }
+}
+
+.authors-book {
+  &__wrap {
+  }
+}
+
+.book-collection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-collection-item {
+  max-width: 620px;
+  display: flex;
+  &__image {
+    width: 50%;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__detail {
+  }
+
+  &__title {
+    font-size: 32px;
+    color: var(--blue);
+    font-family: var(--f-family-secondary);
+    font-weight: var(--bold);
+    text-transform: capitalize;
+    letter-spacing: 0.01em;
+    transition: color 0.3s;
+    margin-bottom: 5px;
+    &:hover {
+      color: var(--yellow);
+    }
+  }
+
+  &__price {
+    font-family: var(--f-family-primary);
+    color: var(--yellow);
+    font-size: 22px;
+    font-weight: var(--bold);
+  }
+
+  &__annotation {
+    font-family: var(--f-family-primary);
+    color: var(--grey);
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  &__format {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h3 {
+      color: var(--blue);
+      font-size: 24px;
+    }
   }
 }

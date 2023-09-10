@@ -1,3 +1,4 @@
+import { AuthorsBook } from './components/AuthorsBook/AuthorsBook';
 import { Header } from './components/Header/Header';
 import { PreviewArea } from './components/PreviewArea/PreviewArea';
 
@@ -14,6 +15,7 @@ function App() {
           <PreviewArea />
         </div>
       </div>
+      <AuthorsBook />
     </>
   );
 }
