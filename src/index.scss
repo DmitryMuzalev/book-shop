@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -40,8 +40,8 @@ ul {
   --grey: #969aa0;
 
   //_Fonts:
-  --f-family-primary: 'Inter', sans-serif;
-  --f-family-secondary: 'Cardo', serif;
+  --f-family-primary: "Inter", sans-serif;
+  --f-family-secondary: "Cardo", serif;
 
   --regular: 400;
   --medium: 500;
@@ -335,6 +335,12 @@ h6 {
     text-transform: capitalize;
     color: var(--blue);
     line-height: 1.2;
+    @media (max-width: 767px) {
+      font-size: 32px;
+    }
+    @media (max-width: 479px) {
+      font-size: 28px;
+    }
   }
   &__line {
     display: inline-block;
@@ -348,23 +354,47 @@ h6 {
   }
 }
 
-.authors-book {
-  &__wrap {
-  }
-}
-
 .book-collection {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 1279px) {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .book-collection-item {
   max-width: 620px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  @media (max-width: 1279px) {
+    max-width: 100%;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
   &__image {
     width: 50%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
     img {
-      max-width: 100%;
+      width: 100%;
+      box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__listing {
+    width: 50%;
+    @media (max-width: 767px) {
+      width: 100%;
     }
   }
 
@@ -372,6 +402,7 @@ h6 {
   }
 
   &__title {
+    display: inline-block;
     font-size: 32px;
     color: var(--blue);
     font-family: var(--f-family-secondary);
@@ -379,7 +410,12 @@ h6 {
     text-transform: capitalize;
     letter-spacing: 0.01em;
     transition: color 0.3s;
+    line-height: 1.2;
     margin-bottom: 5px;
+
+    @media (max-width: 767px) {
+      font-size: 22px;
+    }
     &:hover {
       color: var(--yellow);
     }
@@ -390,6 +426,20 @@ h6 {
     color: var(--yellow);
     font-size: 22px;
     font-weight: var(--bold);
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    padding-top: 15px;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      font-size: 17px;
+    }
   }
 
   &__annotation {
@@ -406,6 +456,12 @@ h6 {
     h3 {
       color: var(--blue);
       font-size: 24px;
+      @media (max-width: 767px) {
+        font-size: 20px;
+      }
     }
+  }
+  &__btn {
+    align-self: start;
   }
 }

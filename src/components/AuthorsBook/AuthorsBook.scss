@@ -1,0 +1,20 @@
+.authors-book {
+  padding: 110px 0 90px;
+  @media (max-width: 1279px) {
+    padding: 90px 0 70px;
+  }
+  @media (max-width: 991px) {
+    padding: 50px 0;
+  }
+  &__wrap {
+  }
+  &__content {
+    margin-top: 60px;
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+    @media (max-width: 479px) {
+      margin-top: 20px;
+    }
+  }
+}
