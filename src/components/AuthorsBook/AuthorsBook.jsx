@@ -1,4 +1,3 @@
-import "./AuthorsBook.scss";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 
 const books = [
@@ -55,7 +54,9 @@ function AuthorsBook() {
     <section className="authors-book">
       <div className="container">
         <div className="authors-book__wrap">
-          <SectionTitle>the author’s book</SectionTitle>
+          <SectionTitle>
+            <h2>the author’s book</h2>
+          </SectionTitle>
           <ul className="book-collection authors-book__content">
             {books.map((book) => {
               return (

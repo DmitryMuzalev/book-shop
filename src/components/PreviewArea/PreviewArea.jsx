@@ -1,5 +1,3 @@
-import './PreviewArea.scss';
-
 function PreviewArea() {
   return (
     <section className="preview-area">

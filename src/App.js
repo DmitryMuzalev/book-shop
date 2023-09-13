@@ -1,21 +1,13 @@
-import { AuthorsBook } from './components/AuthorsBook/AuthorsBook';
-import { Header } from './components/Header/Header';
-import { PreviewArea } from './components/PreviewArea/PreviewArea';
+import { Descriptor } from "./components/Descriptor/Descriptor";
+import { AuthorsBook } from "./components/AuthorsBook/AuthorsBook";
+import { AboutAuthor } from "./components/AboutAuthor/AboutAuthor";
 
 function App() {
   return (
     <>
-      <div
-        style={{
-          backgroundColor: 'var(--blue)',
-        }}
-      >
-        <div className="container">
-          <Header />
-          <PreviewArea />
-        </div>
-      </div>
+      <Descriptor />
       <AuthorsBook />
+      <AboutAuthor />
     </>
   );
 }

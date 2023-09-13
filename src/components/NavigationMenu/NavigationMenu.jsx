@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { FaAngleDown } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { FaAngleDown } from "react-icons/fa";
 
 function NavigationMenu({ toggleDropMenu, isShowDropMenu }) {
   return (
@@ -18,7 +18,7 @@ function NavigationMenu({ toggleDropMenu, isShowDropMenu }) {
       </a>
       <div className="dropdown">
         <div
-          className="dropdown-toggle nav-menu__link"
+          className="dropdown__toggle nav-menu__link"
           onClick={toggleDropMenu}
         >
           <p>Pages</p>

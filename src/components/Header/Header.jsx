@@ -1,19 +1,18 @@
-import { clsx } from 'clsx';
-import './Header.scss';
+import { clsx } from "clsx";
 import {
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
   FaShoppingCart,
-} from 'react-icons/fa';
-import { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
-import { NavigationMenu } from '../NavigationMenu/NavigationMenu';
-import { AnimatePresence } from 'framer-motion';
+} from "react-icons/fa";
+import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
+import { NavigationMenu } from "../NavigationMenu/NavigationMenu";
+import { AnimatePresence } from "framer-motion";
 
 function Header() {
-  const stylesHeaderButton = clsx('btn', 'header__btn');
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 991px)' });
+  const stylesHeaderButton = clsx("btn", "header__btn");
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991px)" });
   const [isShowDropMenu, setIsShowDropMenu] = useState(false);
   const [isShowNavMenu, setIsNavMenu] = useState(false);
 
@@ -27,14 +26,14 @@ function Header() {
           <a href="#!" className="logo header__logo">
             <img src="./images/logo.svg" alt="logo" />
           </a>
-          <div className="header__social-links-wrap">
-            <a href="#!" className="social-link social-link_w">
+          <div className="header__social-links-wrap social-links">
+            <a href="#!" className="social-links__item social-links__item_w">
               <FaFacebookF />
             </a>
-            <a href="#!" className="social-link social-link_w">
+            <a href="#!" className="social-links__item social-links__item_w">
               <FaTwitter />
             </a>
-            <a href="#!" className="social-link social-link_w">
+            <a href="#!" className="social-links__item social-links__item_w">
               <FaLinkedinIn />
             </a>
           </div>
