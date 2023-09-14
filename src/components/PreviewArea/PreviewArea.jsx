@@ -1,6 +1,6 @@
 function PreviewArea() {
   return (
-    <section className="preview-area">
+    <section className="preview-area section-wrap">
       <div className="preview-area__wrap">
         <div className="preview-area__content-wrap">
           <p className="preview-area__subtitle">Welcome to Pages!!!</p>

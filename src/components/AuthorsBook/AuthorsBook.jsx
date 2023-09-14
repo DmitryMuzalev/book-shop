@@ -51,7 +51,7 @@ function BookCollectionItem({ image, title, price, annotation, format }) {
 
 function AuthorsBook() {
   return (
-    <section className="authors-book">
+    <section className="authors-book section-wrap">
       <div className="container">
         <div className="authors-book__wrap">
           <SectionTitle>

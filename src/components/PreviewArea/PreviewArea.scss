@@ -1,15 +1,8 @@
 .preview-area {
   color: var(--white);
-  padding: 100px 0;
 
-  @media (max-width: 1279px) {
-    padding-top: 80px;
-  }
-  @media (max-width: 991px) {
-    padding-top: 40px;
-  }
-  @media (max-width: 991px) {
-    padding-bottom: 80px;
+  @media (min-width: 1279px) {
+    padding: 100px 0;
   }
 
   &__wrap {
@@ -78,6 +71,7 @@
 
   &__content {
     font-size: 1rem;
+    margin-bottom: 2.6em;
     @media (max-width: 991px) {
       font-size: toRem(18);
     }
@@ -88,7 +82,6 @@
       line-height: 180%;
       color: var(--blue-middle);
     }
-    margin-bottom: 2.6em;
   }
 
   &__buttons-wrap {
@@ -97,6 +90,9 @@
     align-items: center;
     gap: 40px;
     margin-bottom: 50px;
+    @media (max-width: 767px) {
+      gap: 30px;
+    }
   }
 
   &__btn {
@@ -149,6 +145,9 @@
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  @media (max-width: 479px) {
+    justify-content: start;
+  }
 }
 
 .book-details-item {
@@ -165,6 +164,9 @@
     font-weight: var(--bold);
     letter-spacing: 0.02em;
     margin-bottom: toEm(10, 24);
+    @media (max-width: 767px) {
+      font-size: toRem(20);
+    }
   }
 
   &__content {
@@ -173,5 +175,8 @@
     font-weight: var(--regular);
     color: var(--blue-middle);
     line-height: 170%;
+    @media (max-width: 767px) {
+      font-size: toRem(17);
+    }
   }
 }

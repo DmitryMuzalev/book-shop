@@ -2,7 +2,7 @@ import { SectionTitle } from "../SectionTitle/SectionTitle";
 
 function AboutAuthor() {
   return (
-    <section className="about-author">
+    <section className="about-author section-wrap">
       <div className="container">
         <div className="about-author__wrap section-grid">
           <div className="about-author__image">
