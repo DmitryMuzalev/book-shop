@@ -1,0 +1,24 @@
+.learn {
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px; //!Временные стили
+  }
+
+  &__content-wrap {
+  }
+
+  &__image-wrap {
+  }
+
+  &__image-border {
+  }
+}
+
+.learn-step {
+  &__number {
+  }
+
+  &__description {
+  }
+}
