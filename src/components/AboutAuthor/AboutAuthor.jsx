@@ -1,12 +1,12 @@
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { SectionTitle } from '../SectionTitle/SectionTitle';
 
 function AboutAuthor() {
   return (
     <section className="about-author section-wrap">
       <div className="container">
         <div className="about-author__wrap section-grid">
-          <div className="about-author__image">
-            <div className="about-author__image-border image-border">
+          <div className="about-author__image-wrap frame">
+            <div className="frame__border">
               <img
                 src="./images/photos/avatar_about_author.jpg"
                 alt="Author name"

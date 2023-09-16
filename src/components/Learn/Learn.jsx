@@ -1,4 +1,4 @@
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { SectionTitle } from '../SectionTitle/SectionTitle';
 
 function Learn() {
   return (
@@ -11,7 +11,7 @@ function Learn() {
           <div className="learn__content-wrap">
             <div className="learn-step">
               <div className="learn-step__number">
-                <span>01</span>
+                <h3>01</h3>
               </div>
               <h4 className="learn-step__description">
                 Use HDFS & Map Reduce for storing & analyzing data at scale.
@@ -19,7 +19,7 @@ function Learn() {
             </div>
             <div className="learn-step">
               <div className="learn-step__number">
-                <span>02</span>
+                <h3>02</h3>
               </div>
               <h4 className="learn-step__description">
                 Consume streaming data using Spark Streaming, Flink, and Storm.
@@ -27,7 +27,7 @@ function Learn() {
             </div>
             <div className="learn-step">
               <div className="learn-step__number">
-                <span>03</span>
+                <h3>03</h3>
               </div>
               <h4 className="learn-step__description">
                 Choose an appropriate data storage technology for your
@@ -36,7 +36,7 @@ function Learn() {
             </div>
             <div className="learn-step">
               <div className="learn-step__number">
-                <span>04</span>
+                <h3>04</h3>
               </div>
               <h4 className="learn-step__description">
                 Analyze non-relational data using HBase, Cassandra, and MongoDB.
@@ -44,11 +44,13 @@ function Learn() {
             </div>
           </div>
           <div className="learn__image-wrap">
-            <div className="learn__image-border image-border">
-              <img
-                src="./images/other/woman_and_book.jpg"
-                alt="Woman and book"
-              />
+            <div className="learn__image frame">
+              <div className="frame__border">
+                <img
+                  src="./images/other/woman_and_book.jpg"
+                  alt="Woman and book"
+                />
+              </div>
             </div>
           </div>
         </div>

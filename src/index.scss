@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -38,8 +38,8 @@ ul {
   --grey: #969aa0;
 
   //_Fonts:
-  --f-family-primary: "Inter", sans-serif;
-  --f-family-secondary: "Cardo", serif;
+  --f-family-primary: 'Inter', sans-serif;
+  --f-family-secondary: 'Cardo', serif;
 
   --regular: 400;
   --medium: 500;
@@ -67,6 +67,7 @@ h5,
 h6 {
   font-family: var(--f-family-secondary);
   text-transform: capitalize;
+  font-weight: var(--bold);
 }
 h1 {
   font-size: toRem(65);
@@ -323,17 +324,35 @@ h6 {
 }
 
 //_Image border:
-.image-border {
-  border: 10px solid var(--yellow);
+.frame {
+  @media (max-width: 1279px) {
+    max-width: 50%;
+  }
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+  &__border {
+    margin-left: 10px;
+    margin-top: 20px;
+    border: 10px solid var(--yellow);
+    img {
+      position: relative;
+      width: 100%;
+      top: -20px;
+      right: 20px;
+      z-index: 2;
+      box-shadow: 0 0 20px 0 rgba(27, 55, 100, 0.3);
+    }
+  }
 }
 
 //_Importing component styles:
-@import "./components/Header/Header.scss";
-@import "./components/PreviewArea/PreviewArea.scss";
-@import "./components/AuthorsBook/AuthorsBook.scss";
-@import "./components/AboutAuthor/AboutAuthor.scss";
-@import "./components/Partners/Partners.scss";
-@import "./components/Order/Order.scss";
-@import "./components/Learn/Learn.scss";
+@import './components/Header/Header.scss';
+@import './components/PreviewArea/PreviewArea.scss';
+@import './components/AuthorsBook/AuthorsBook.scss';
+@import './components/AboutAuthor/AboutAuthor.scss';
+@import './components/Partners/Partners.scss';
+@import './components/Order/Order.scss';
+@import './components/Learn/Learn.scss';
 
-@import "./components/SectionTitle/SectionTitle.scss";
+@import './components/SectionTitle/SectionTitle.scss';
