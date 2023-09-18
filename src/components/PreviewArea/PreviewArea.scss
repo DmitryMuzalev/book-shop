@@ -53,8 +53,7 @@
   }
 
   &__title {
-    font-family: var(--f-family-secondary);
-    font-weight: var(--bold);
+    color: var(--white);
     letter-spacing: -0.02em;
     line-height: 110%;
     margin-bottom: toEm(30, 65);
