@@ -1,4 +1,4 @@
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 const books = [
   {
@@ -29,7 +29,7 @@ function BookCollectionItem({ image, title, price, annotation, format }) {
       </a>
       <div className="book-collection-item__listing">
         <div className="book-collection-item__detail">
-          <a href="#!" className="book-collection-item__title">
+          <a href="#!" className="book-collection-item__title title">
             {title}
           </a>
           <div className="book-collection-item__price">{`$ ${price} USD`}</div>
@@ -38,7 +38,7 @@ function BookCollectionItem({ image, title, price, annotation, format }) {
           <p className="book-collection-item__annotation">{annotation}</p>
           <div className="book-collection-item__format">
             <span className="marker"></span>
-            <h3>{format}</h3>
+            <h3 className="title title_big">{format}</h3>
           </div>
           <button className="btn btn_transparent book-collection-item__btn">
             Order Now
@@ -71,4 +71,5 @@ function AuthorsBook() {
     </section>
   );
 }
+
 export { AuthorsBook };

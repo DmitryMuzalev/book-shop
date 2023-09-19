@@ -1,20 +1,10 @@
 //_Section title:
 .section-title {
   text-align: center;
+
   h2 {
     position: relative;
-    font-size: toRem(42);
-    font-weight: var(--bold);
-    text-transform: capitalize;
-    color: var(--blue);
-    line-height: 1.2;
     padding-bottom: toEm(20, 42);
-    @media (max-width: 767px) {
-      font-size: toRem(32);
-    }
-    @media (max-width: 479px) {
-      font-size: toRem(28);
-    }
 
     &::before {
       content: "";
@@ -28,25 +18,24 @@
       background-color: var(--yellow);
     }
   }
+
   &_left {
     text-align: left;
+
     h2::before {
       left: 0;
       transform: translateX(0);
     }
   }
+
   &_b {
     h2::before {
       background-color: var(--blue);
     }
   }
+
   p {
-    font-size: 1rem;
     padding-top: toEm(28, 19);
     line-height: 1.8;
-    color: var(--grey);
-    @media (max-width: 479px) {
-      font-size: toRem(17);
-    }
   }
 }

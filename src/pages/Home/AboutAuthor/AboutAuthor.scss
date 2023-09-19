@@ -1,12 +1,11 @@
 .about-author {
   background-color: var(--blue-light);
-  &__wrap {
-  }
 
   &__content-wrap {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
     @media (max-width: 479px) {
       gap: 20px;
     }
@@ -16,17 +15,19 @@
     display: grid;
     gap: 16px;
     grid-template-columns: repeat(3, 1fr);
+
     @media (max-width: 479px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
   &__image-wrap {
     justify-self: center;
   }
 
   &__details-item {
     display: flex;
-    border-right: 1px solid #ffca42;
+    border-right: 1px solid var(--yellow);
     margin-right: 10px;
     padding-right: 10px;
 
@@ -46,16 +47,16 @@
     align-self: start;
   }
 }
+
 .about-author-detail {
   &__content {
-    font-family: var(--f-family-secondary);
-    color: var(--blue);
     font-size: toRem(55);
     line-height: 1.4;
-    font-weight: var(--bold);
+
     @media (max-width: 991px) {
       font-size: toRem(45);
     }
+
     @media (max-width: 767px) {
       font-size: toRem(35);
     }
@@ -66,31 +67,34 @@
     color: var(--grey);
     font-size: toRem(18);
     font-weight: var(--regular);
+
     @media (max-width: 991px) {
       font-size: toRem(17);
     }
+
     @media (max-width: 767px) {
       font-size: toRem(15);
     }
   }
 }
+
 .business-card {
-  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 40px;
   padding: 20px;
-  color: #b4c7e7;
   background-color: var(--blue);
+
   @media (max-width: 767px) {
-    font-size: toRem(17);
     gap: 20px;
   }
+
   @media (max-width: 479px) {
     flex-direction: column;
     width: 100%;
     padding: 10px;
   }
+
   &__qr-code {
     display: flex;
     justify-content: center;
@@ -98,16 +102,16 @@
     background-color: var(--white);
 
     img {
-      max-width: 100%;
       width: 130px;
       padding: 15px;
     }
   }
 
   &__title {
-    color: var(--yellow);
     font-size: toRem(22);
+    color: var(--yellow);
     margin-bottom: toEm(10, 22);
+
     @media (max-width: 767px) {
       font-size: toRem(20);
     }
@@ -115,14 +119,14 @@
 
   &__contact {
     margin-bottom: toEm(5, 19);
+
+    p,
     a {
-      font-size: inherit;
-      transition: color 0.3s;
-      color: #b4c7e7;
+      color: var(--blue-middle);
+    }
+
+    a {
       padding-left: toEm(10, 19);
-      &:hover {
-        color: var(--yellow);
-      }
     }
   }
 }

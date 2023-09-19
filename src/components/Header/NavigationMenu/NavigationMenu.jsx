@@ -21,13 +21,15 @@ function NavigationMenu({ toggleDropMenu, isShowDropMenu }) {
           className="dropdown__toggle nav-menu__link"
           onClick={toggleDropMenu}
         >
-          <p>Pages</p>
+          <span>Pages</span>
           <FaAngleDown />
         </div>
         {isShowDropMenu && (
           <nav className="dropdown-menu">
             <div className="dropdown-menu__column">
-              <div className="dropdown-menu__title">pages</div>
+              <div className="dropdown-menu__title title title_small">
+                pages
+              </div>
               <a href="#!" className="dropdown-menu__link">
                 articles
               </a>
@@ -39,7 +41,7 @@ function NavigationMenu({ toggleDropMenu, isShowDropMenu }) {
               </a>
             </div>
             <div className="dropdown-menu__column">
-              <div className="dropdown-menu__title">utility pages</div>
+              <div className="dropdown-menu__title title">utility pages</div>
               <a href="#!" className="dropdown-menu__link">
                 style guide
               </a>

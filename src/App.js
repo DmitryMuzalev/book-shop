@@ -1,21 +1,11 @@
-import { Descriptor } from "./components/Descriptor/Descriptor";
-import { AuthorsBook } from "./components/AuthorsBook/AuthorsBook";
-import { AboutAuthor } from "./components/AboutAuthor/AboutAuthor";
-import { Partners } from "./components/Partners/Partners";
-import { Order } from "./components/Order/Order";
-import { Learn } from "./components/Learn/Learn";
-import { Chapter } from "./components/Chapter/Chapter";
+import { Header } from "./components/Header/Header";
+import { Home } from "./pages/Home/Home";
 
 function App() {
   return (
     <>
-      <Descriptor />
-      <AuthorsBook />
-      <AboutAuthor />
-      <Partners />
-      <Order />
-      <Learn />
-      <Chapter />
+      <Header />
+      <Home />
     </>
   );
 }

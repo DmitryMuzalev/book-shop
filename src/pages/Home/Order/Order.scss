@@ -8,29 +8,20 @@
     gap: 50px;
     align-items: center;
     justify-content: space-between;
+
     @media (max-width: 1279px) {
       gap: 25px;
     }
+
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
     }
   }
 
-  &__content-wrap {
-  }
-
-  &__image-wrap {
-    img {
-      max-width: 100%;
-    }
-  }
-
-  &__title {
-  }
-
   &__btn {
     color: var(--white);
     margin-top: 30px;
+
     &:hover {
       color: var(--blue);
     }

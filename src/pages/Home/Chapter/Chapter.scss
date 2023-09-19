@@ -1,5 +1,6 @@
 .chapter {
   background-color: var(--blue-light);
+
   &__wrap {
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+
     @media (max-width: 991px) {
       grid-template-columns: 1fr;
     }
@@ -18,13 +20,9 @@
 
   &__free-trail-wrap {
     text-align: center;
-    color: var(--grey);
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: var(--regular);
     a {
-      color: var(--blue);
       &:hover {
+        color: var(--blue);
         text-decoration: underline;
       }
     }
@@ -42,21 +40,11 @@
   padding: 40px 20px;
   background-color: var(--white);
 
-  &__title {
-    font-size: toRem(24);
-    line-height: 1.2;
-  }
-
-  &__content {
-    color: var(--grey);
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
   &__detail {
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(2, 1fr);
+
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
     }
@@ -74,15 +62,6 @@
   }
 
   &__title {
-    font-family: var(--f-family-secondary);
     color: var(--blue);
-    font-weight: 700;
-    font-size: toRem(22);
-  }
-
-  &__content {
-    line-height: 1;
-    color: var(--grey);
-    font-size: toRem(18);
   }
 }

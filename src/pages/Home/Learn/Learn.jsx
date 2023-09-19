@@ -1,4 +1,4 @@
-import { SectionTitle } from '../SectionTitle/SectionTitle';
+import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 function Learn() {
   return (
@@ -9,7 +9,7 @@ function Learn() {
         </SectionTitle>
         <div className="learn__wrap">
           <div className="learn__content-wrap">
-            <div className="learn-step">
+            <div className="learn-step title_big">
               <div className="learn-step__number">
                 <h3>01</h3>
               </div>
@@ -17,7 +17,7 @@ function Learn() {
                 Use HDFS & Map Reduce for storing & analyzing data at scale.
               </h4>
             </div>
-            <div className="learn-step">
+            <div className="learn-step title_big">
               <div className="learn-step__number">
                 <h3>02</h3>
               </div>
@@ -25,7 +25,7 @@ function Learn() {
                 Consume streaming data using Spark Streaming, Flink, and Storm.
               </h4>
             </div>
-            <div className="learn-step">
+            <div className="learn-step title_big">
               <div className="learn-step__number">
                 <h3>03</h3>
               </div>
@@ -34,7 +34,7 @@ function Learn() {
                 application.
               </h4>
             </div>
-            <div className="learn-step">
+            <div className="learn-step title_big">
               <div className="learn-step__number">
                 <h3>04</h3>
               </div>

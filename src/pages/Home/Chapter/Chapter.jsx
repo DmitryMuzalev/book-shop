@@ -1,4 +1,4 @@
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 function Chapter() {
   return (
@@ -10,7 +10,7 @@ function Chapter() {
           </SectionTitle>
           <div className="chapter__content-wrap">
             <div className="chapter-item">
-              <h3 className="chapter-item__title">
+              <h3 className="chapter-item__title title_big">
                 Chapter-1 Get Started Intro
               </h3>
               <div className="chapter-item__content">
@@ -23,14 +23,16 @@ function Chapter() {
                 <div className="chapter-detail-item">
                   <div className="marker"></div>
                   <p className="chapter-detail-item__content">
-                    <span className="chapter-detail-item__title">Pages : </span>
+                    <span className="chapter-detail-item__title title title_small">
+                      Pages :{" "}
+                    </span>
                     160pages
                   </p>
                 </div>
                 <div className="chapter-detail-item">
                   <div className="marker"></div>
                   <p className="chapter-detail-item__content">
-                    <span className="chapter-detail-item__title">
+                    <span className="chapter-detail-item__title title title_small">
                       Length :{" "}
                     </span>
                     3 Hours
@@ -39,7 +41,7 @@ function Chapter() {
               </div>
             </div>
             <div className="chapter-item">
-              <h3 className="chapter-item__title">
+              <h3 className="chapter-item__title title_big">
                 Chapter-1 Get Started Intro
               </h3>
               <div className="chapter-item__content">
@@ -52,14 +54,16 @@ function Chapter() {
                 <div className="chapter-detail-item">
                   <div className="marker"></div>
                   <p className="chapter-detail-item__content">
-                    <span className="chapter-detail-item__title">Pages : </span>
+                    <span className="chapter-detail-item__title title title_small">
+                      Pages :{" "}
+                    </span>
                     160pages
                   </p>
                 </div>
                 <div className="chapter-detail-item">
                   <div className="marker"></div>
                   <p className="chapter-detail-item__content">
-                    <span className="chapter-detail-item__title">
+                    <span className="chapter-detail-item__title title title_small">
                       Length :{" "}
                     </span>
                     3 Hours
@@ -68,7 +72,7 @@ function Chapter() {
               </div>
             </div>
             <div className="chapter-item">
-              <h3 className="chapter-item__title">
+              <h3 className="chapter-item__title title_big">
                 Chapter-1 Get Started Intro
               </h3>
               <div className="chapter-item__content">
@@ -81,14 +85,16 @@ function Chapter() {
                 <div className="chapter-detail-item">
                   <div className="marker"></div>
                   <p className="chapter-detail-item__content">
-                    <span className="chapter-detail-item__title">Pages : </span>
+                    <span className="chapter-detail-item__title title title_small">
+                      Pages :{" "}
+                    </span>
                     160pages
                   </p>
                 </div>
                 <div className="chapter-detail-item">
                   <div className="marker"></div>
                   <p className="chapter-detail-item__content">
-                    <span className="chapter-detail-item__title">
+                    <span className="chapter-detail-item__title title title_small">
                       Length :{" "}
                     </span>
                     3 Hours
@@ -97,7 +103,7 @@ function Chapter() {
               </div>
             </div>
             <div className="chapter-item">
-              <h3 className="chapter-item__title">
+              <h3 className="chapter-item__title title_big">
                 Chapter-1 Get Started Intro
               </h3>
               <div className="chapter-item__content">
@@ -110,14 +116,16 @@ function Chapter() {
                 <div className="chapter-detail-item">
                   <div className="marker"></div>
                   <p className="chapter-detail-item__content">
-                    <span className="chapter-detail-item__title">Pages : </span>
+                    <span className="chapter-detail-item__title title title_small">
+                      Pages :{" "}
+                    </span>
                     160pages
                   </p>
                 </div>
                 <div className="chapter-detail-item">
                   <div className="marker"></div>
                   <p className="chapter-detail-item__content">
-                    <span className="chapter-detail-item__title">
+                    <span className="chapter-detail-item__title title title_small">
                       Length :{" "}
                     </span>
                     3 Hours

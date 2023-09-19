@@ -1,10 +1,11 @@
 .learn {
   &__wrap {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 50px; //!Временные стили
-    gap: 30px;
     align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+    gap: 50px;
+
     @media (max-width: 1279px) {
       grid-template-columns: 1fr;
     }
@@ -14,6 +15,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
     }
@@ -22,25 +24,16 @@
   &__image-wrap {
     display: flex;
     justify-content: center;
+
     @media (max-width: 1279px) {
       order: -1;
     }
-  }
-
-  &__image {
   }
 }
 
 .learn-step {
   background-color: var(--blue-light);
   padding: toEm(30, 24);
-  color: var(--blue);
-  font-size: toRem(24);
-  font-weight: var(--bold);
-
-  @media (max-width: 767px) {
-    font-size: toRem(20);
-  }
 
   &__number {
     display: flex;
@@ -51,9 +44,9 @@
     border-radius: 50%;
     background-color: var(--yellow);
     margin-bottom: toEm(30, 24);
+
     h3 {
       font-size: inherit;
-      line-height: 1.2;
     }
   }
 

@@ -1,4 +1,4 @@
-import { SectionTitle } from '../SectionTitle/SectionTitle';
+import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 function AboutAuthor() {
   return (
@@ -26,7 +26,7 @@ function AboutAuthor() {
             <div className="about-author__details">
               <div className="about-author__details-item">
                 <div className="about-author-detail">
-                  <div className="about-author-detail__content">02</div>
+                  <div className="about-author-detail__content title">02</div>
                   <h3 className="about-author-detail__title">
                     Books Published
                   </h3>
@@ -34,13 +34,13 @@ function AboutAuthor() {
               </div>
               <div className="about-author__details-item">
                 <div className="about-author-detail">
-                  <div className="about-author-detail__content">4.5</div>
+                  <div className="about-author-detail__content title">4.5</div>
                   <h3 className="about-author-detail__title">User Reviews</h3>
                 </div>
               </div>
               <div className="about-author__details-item">
                 <div className="about-author-detail">
-                  <div className="about-author-detail__content">04</div>
+                  <div className="about-author-detail__content title">04</div>
                   <h3 className="about-author-detail__title">
                     Best Seller Awards
                   </h3>

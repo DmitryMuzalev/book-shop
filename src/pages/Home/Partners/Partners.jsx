@@ -1,4 +1,4 @@
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 function Partners() {
   return (
@@ -16,7 +16,7 @@ function Partners() {
                   alt="Amazen"
                 />
               </div>
-              <h3 className="partner__name">Amazen Corp</h3>
+              <h3 className="partner__name title_big">Amazen Corp</h3>
               <div className="partner__description">
                 <p>A long established fact that a who looking at its layout.</p>
               </div>
@@ -28,7 +28,7 @@ function Partners() {
                   alt="Megan Books"
                 />
               </div>
-              <h3 className="partner__name">Megan Books</h3>
+              <h3 className="partner__name title_big">Megan Books</h3>
               <div className="partner__description">
                 <p>
                   We help physical bookstores manage their overstock to the book
@@ -40,7 +40,7 @@ function Partners() {
               <div className="partner__logo">
                 <img src="./images/partners/los_books_logo.svg" alt="Megank" />
               </div>
-              <h3 className="partner__name">Megank</h3>
+              <h3 className="partner__name title_big">Megank</h3>
               <div className="partner__description">
                 <p>
                   Bookstore serving up the full spectrum of Black literature and
@@ -55,7 +55,7 @@ function Partners() {
                   alt="Urban Store"
                 />
               </div>
-              <h3 className="partner__name">Urban Store</h3>
+              <h3 className="partner__name title_big">Urban Store</h3>
               <div className="partner__description">
                 <p>
                   We also carry the latest records, issues of all of your
