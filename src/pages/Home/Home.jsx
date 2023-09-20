@@ -6,6 +6,7 @@ import { Learn } from "./Learn/Learn";
 import { Chapter } from "./Chapter/Chapter";
 import { PreviewArea } from "./PreviewArea/PreviewArea";
 import { Testimonial } from "./Testimonial/Testimonial";
+import { HomeBlog } from "./HomeBlog/HomeBlog";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <Learn />
       <Chapter />
       <Testimonial />
+      <HomeBlog />
     </>
   );
 }
