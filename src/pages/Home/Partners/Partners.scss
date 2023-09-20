@@ -23,6 +23,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   &__logo {
     display: flex;
@@ -35,9 +36,6 @@
   &__name {
     margin-top: toEm(22, 24);
     padding-bottom: toEm(5, 24);
-  }
-
-  &__description {
-    text-align: center;
+    line-height: 150%;
   }
 }

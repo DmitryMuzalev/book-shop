@@ -40,6 +40,10 @@
   padding: 40px 20px;
   background-color: var(--white);
 
+  &__content {
+    flex-grow: 1;
+  }
+
   &__detail {
     display: grid;
     gap: 15px;
