@@ -1,10 +1,9 @@
 //_Section title:
 .section-title {
-  text-align: center;
-
   h2 {
     position: relative;
     padding-bottom: toEm(20, 42);
+    text-align: center;
 
     &::before {
       content: "";
@@ -20,11 +19,21 @@
   }
 
   &_left {
-    text-align: left;
+    h2 {
+      text-align: left;
+      &::before {
+        left: 0;
+        transform: translateX(0);
+      }
 
-    h2::before {
-      left: 0;
-      transform: translateX(0);
+      @media (max-width: 767px) {
+        text-align: center;
+
+        &::before {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
   }
 

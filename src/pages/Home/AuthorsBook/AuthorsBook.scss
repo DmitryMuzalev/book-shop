@@ -61,7 +61,7 @@
     margin-bottom: toEm(5, 32);
 
     @media (max-width: 767px) {
-      font-size: toRem(22);
+      font-size: toRem(24);
     }
   }
 
@@ -91,6 +91,12 @@
     display: flex;
     align-items: center;
     gap: toEm(10, 24);
+
+    @media (max-width: 479px) {
+      h3 {
+        font-size: toRem(20);
+      }
+    }
   }
 
   &__btn {
