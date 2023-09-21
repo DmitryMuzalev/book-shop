@@ -194,6 +194,7 @@ h6,
 .social-links {
   display: flex;
   gap: 10px;
+
   &__item {
     display: flex;
     align-items: center;
@@ -206,21 +207,26 @@ h6,
     @media (max-width: 479px) {
       font-size: toRem(15);
     }
+
     &_w {
-      color: var(--blue);
       background-color: var(--white);
       border: 2px solid var(--white);
+
       &:hover {
         background-color: var(--yellow);
         border-color: var(--yellow);
+        color: var(--blue);
       }
     }
+
     &_b {
-      color: var(--white);
       border: 1px solid var(--yellow);
       background-color: transparent;
+      color: var(--white);
+
       &:hover {
         background-color: var(--yellow);
+        color: var(--white);
       }
     }
   }
@@ -301,3 +307,4 @@ h6,
 @import "./components/Header/Header.scss";
 @import "./pages/Home/Home.scss";
 @import "./components/SectionTitle/SectionTitle.scss";
+@import "./components/Footer/Footer.scss";
