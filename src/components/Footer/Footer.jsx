@@ -3,7 +3,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -50,7 +50,7 @@ function Footer() {
             </div>
           </div>
           <div className="footer__column footer-widget">
-            <h3 className="footer-widget__title">Explore</h3>
+            <h3 className="footer-widget__title title title_big">Explore</h3>
             <div className="footer-widget__links-wrap">
               <a href="#!" className="footer-widget__link">
                 Home
@@ -70,7 +70,9 @@ function Footer() {
             </div>
           </div>
           <div className="footer__column footer-widget">
-            <h3 className="footer-widget__title">Utility Pages</h3>
+            <h3 className="footer-widget__title title title_big">
+              Utility Pages
+            </h3>
             <div className="footer-widget__links-wrap">
               <a href="#!" className="footer-widget__link">
                 Style Guide
@@ -84,10 +86,14 @@ function Footer() {
             </div>
           </div>
           <div className="footer__column footer-widget">
-            <h3 className="footer-widget__title">Keep in Touch</h3>
+            <h3 className="footer-widget__title title title_big">
+              Keep in Touch
+            </h3>
             <div className="footer-contact-wrap">
               <div className="footer-contact-item">
-                <div className="footer-contact-item__label">Address :</div>
+                <div className="footer-contact-item__label title">
+                  Address :
+                </div>
                 <div className="footer-contact-item__content">
                   <p>
                     24A Kingston St, Los Vegas <br />
@@ -96,19 +102,25 @@ function Footer() {
                 </div>
               </div>
               <div className="footer-contact-item">
-                <div className="footer-contact-item__label">Mail :</div>
+                <div className="footer-contact-item__label title">Mail :</div>
                 <div className="footer-contact-item__content">
                   <a href="mailto: support@pages.com">support@pages.com</a>
                 </div>
               </div>
               <div className="footer-contact-item">
-                <div className="footer-contact-item__label">Phone :</div>
+                <div className="footer-contact-item__label title">Phone :</div>
                 <div className="footer-contact-item__content">
                   <a href="tel:+221234567900">(+22) 123 - 4567 - 900</a>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="copyright">
+          <p className="copyright__text">
+            © Drafted by <a href="#!">VictorFlow</a> - Powered by{' '}
+            <a href="#!">Webflow</a>
+          </p>
         </div>
       </div>
     </footer>

@@ -1,1 +1,135 @@
+.footer {
+  background-color: var(--blue);
+  color: var(--white);
+  padding-top: 100px;
+  @media (max-width: 1279px) {
+    padding-top: 80px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 60px;
+  }
+  @media (max-width: 479px) {
+    padding-top: 40px;
+  }
 
+  &__wrap {
+    display: grid;
+    grid-template-columns: 0.7fr 0.5fr 0.75fr 1.1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+
+    @media (max-width: 1279px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__column {
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-right: 30px;
+    }
+
+    @media (max-width: 1279px) {
+      &:first-child {
+        padding-right: 0;
+        grid-column: span 3;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 991px) {
+      &:last-child {
+        grid-column: span 3;
+      }
+    }
+
+    @media (max-width: 767px) {
+      &:first-child,
+      &:last-child {
+        grid-column: auto;
+      }
+    }
+  }
+}
+
+.footer-widget {
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__links-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__link {
+    position: relative;
+    color: var(--blue-middle);
+    line-height: 170%;
+    padding-left: 40px;
+    background: url('../../../public/images/other/footer-link-marker.svg')
+      no-repeat;
+    background-position: 0 50%;
+  }
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-contact-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 10px;
+  &__label {
+    min-width: 85px;
+  }
+
+  &__content {
+    a,
+    p {
+      color: var(--blue-middle);
+    }
+    a {
+      text-transform: none;
+    }
+    a:hover {
+      color: var(--yellow);
+    }
+  }
+}
+
+.copyright {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.27);
+  padding: 25px 0;
+  text-align: center;
+  &__text {
+    a {
+      color: var(--white);
+      &:hover {
+        color: var(--yellow);
+      }
+    }
+  }
+}
