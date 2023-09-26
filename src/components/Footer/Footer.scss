@@ -81,15 +81,10 @@
     color: var(--blue-middle);
     line-height: 170%;
     padding-left: 40px;
-    background: url('../../../public/images/other/footer-link-marker.svg')
+    background: url("../../../public/images/other/footer-link-marker.svg")
       no-repeat;
     background-position: 0 50%;
   }
-}
-
-.footer-social-links {
-  display: flex;
-  gap: 10px;
 }
 
 .footer-contact-wrap {
@@ -101,7 +96,9 @@
 
 .footer-contact-item {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+
   &__label {
     min-width: 85px;
   }
@@ -124,6 +121,7 @@
   border-top: 1px solid hsla(0, 0%, 100%, 0.27);
   padding: 25px 0;
   text-align: center;
+
   &__text {
     a {
       color: var(--white);

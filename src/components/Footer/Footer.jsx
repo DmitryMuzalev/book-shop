@@ -3,7 +3,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 function Footer() {
   return (
@@ -11,42 +11,34 @@ function Footer() {
       <div className="container">
         <div className="footer__wrap">
           <div className="footer__column footer-widget">
-            <a href="!#">
+            <a href="!#" className="logo footer__logo">
               <img src="./images/logo.svg" alt="logo" />
             </a>
-            <div className="footer-social-links">
-              <div className="social-links">
-                <a
-                  href="#!"
-                  className="social-links__item social-links__item_b"
-                >
-                  <FaFacebookF />
-                </a>
-              </div>
-              <div className="social-links">
-                <a
-                  href="#!"
-                  className="social-links__item social-links__item_b"
-                >
-                  <FaTwitter />
-                </a>
-              </div>
-              <div className="social-links">
-                <a
-                  href="#!"
-                  className="social-links__item social-links__item_b"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </div>
-              <div className="social-links">
-                <a
-                  href="#!"
-                  className="social-links__item social-links__item_b"
-                >
-                  <FaInstagram />
-                </a>
-              </div>
+            <div className="social-links">
+              <a
+                href="#!"
+                className="social-links__item social-links__item_contour"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="#!"
+                className="social-links__item social-links__item_contour"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="#!"
+                className="social-links__item social-links__item_contour"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="#!"
+                className="social-links__item social-links__item_contour"
+              >
+                <FaInstagram />
+              </a>
             </div>
           </div>
           <div className="footer__column footer-widget">
@@ -118,7 +110,7 @@ function Footer() {
         </div>
         <div className="copyright">
           <p className="copyright__text">
-            © Drafted by <a href="#!">VictorFlow</a> - Powered by{' '}
+            © Drafted by <a href="#!">VictorFlow</a> - Powered by{" "}
             <a href="#!">Webflow</a>
           </p>
         </div>

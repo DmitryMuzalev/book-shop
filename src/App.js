@@ -1,12 +1,14 @@
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
-import { Home } from "./pages/Home/Home";
+import { About } from "./pages/About/About";
+//import { Home } from "./pages/Home/Home";
 
 function App() {
   return (
     <>
       <Header />
-      <Home />
+      {/*    <Home /> */}
+      <About />
       <Footer />
     </>
   );

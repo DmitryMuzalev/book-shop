@@ -22,19 +22,28 @@ function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div className="header__header-wrap">
+        <div className="header__wrap">
           <div className="header__logo-wrap">
             <a href="#!" className="logo header__logo">
               <img src="./images/logo.svg" alt="logo" />
             </a>
-            <div className="header__social-links-wrap social-links">
-              <a href="#!" className="social-links__item social-links__item_w">
+            <div className="social-links">
+              <a
+                href="#!"
+                className="social-links__item social-links__item_full"
+              >
                 <FaFacebookF />
               </a>
-              <a href="#!" className="social-links__item social-links__item_w">
+              <a
+                href="#!"
+                className="social-links__item social-links__item_full"
+              >
                 <FaTwitter />
               </a>
-              <a href="#!" className="social-links__item social-links__item_w">
+              <a
+                href="#!"
+                className="social-links__item social-links__item_full"
+              >
                 <FaLinkedinIn />
               </a>
             </div>

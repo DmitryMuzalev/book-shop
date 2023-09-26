@@ -1,10 +1,10 @@
 //_Section title:
 .section-title {
+  h1,
   h2 {
     position: relative;
-    padding-bottom: toEm(20, 42);
     text-align: center;
-
+    padding-bottom: toEm(20, 42);
     &::before {
       content: "";
       position: absolute;
@@ -19,6 +19,7 @@
   }
 
   &_left {
+    h1,
     h2 {
       text-align: left;
       &::before {
@@ -38,6 +39,7 @@
   }
 
   &_b {
+    h1,
     h2::before {
       background-color: var(--blue);
     }
