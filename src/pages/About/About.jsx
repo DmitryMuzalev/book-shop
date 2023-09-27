@@ -1,4 +1,7 @@
+import { AuthorsBook } from "../../components/AuthorsBook/AuthorsBook";
+import { Partners } from "../../components/Partners/Partners";
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
+import { Subscription } from "../../components/Subscription/Subscription";
 import { AuthorInfo } from "./AuthorInfo/AuthorInfo";
 import { MyStory } from "./MyStory/MyStory";
 
@@ -18,6 +21,9 @@ function About() {
       </section>
       <AuthorInfo />
       <MyStory />
+      <AuthorsBook />
+      <Partners />
+      <Subscription />
     </>
   );
 }
