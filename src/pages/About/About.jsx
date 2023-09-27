@@ -1,4 +1,5 @@
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
+import { AuthorInfo } from "./AuthorInfo/AuthorInfo";
 
 function About() {
   return (
@@ -14,6 +15,7 @@ function About() {
           </SectionTitle>
         </div>
       </section>
+      <AuthorInfo />
     </>
   );
 }
