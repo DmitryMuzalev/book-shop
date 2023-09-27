@@ -1,5 +1,6 @@
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
 import { AuthorInfo } from "./AuthorInfo/AuthorInfo";
+import { MyStory } from "./MyStory/MyStory";
 
 function About() {
   return (
@@ -16,6 +17,7 @@ function About() {
         </div>
       </section>
       <AuthorInfo />
+      <MyStory />
     </>
   );
 }
