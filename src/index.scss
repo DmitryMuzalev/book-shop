@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
 //_SCSS Functions:
 @function toRem($value) {
   $remValue: ($value / 19) + rem;
@@ -66,8 +66,8 @@ ul {
   --grey-light: #dce1e9;
 
   //_Fonts:
-  --f-family-primary: "Inter", sans-serif;
-  --f-family-secondary: "Cardo", serif;
+  --f-family-primary: 'Inter', sans-serif;
+  --f-family-secondary: 'Cardo', serif;
 
   --regular: 400;
   --medium: 500;
@@ -263,6 +263,9 @@ h6,
 .section-wrap {
   padding: 140px 0;
 
+  &_b {
+    background-color: var(--blue-light);
+  }
   @media (max-width: 1279px) {
     padding: 100px 0;
   }
@@ -336,11 +339,12 @@ h6,
 }
 
 //_Importing component styles:
-@import "./components/Header/Header.scss";
-@import "./components/Partners/Partners.scss";
-@import "./components/AuthorsBook/AuthorsBook.scss";
-@import "./components/Subscription/Subscription.scss";
-@import "./pages/Home/Home.scss";
-@import "./pages/About/About.scss";
-@import "./components/SectionTitle/SectionTitle.scss";
-@import "./components/Footer/Footer.scss";
+@import './components/Header/Header.scss';
+@import './components/Partners/Partners.scss';
+@import './components/AuthorsBook/AuthorsBook.scss';
+@import './components/Subscription/Subscription.scss';
+@import './pages/Home/Home.scss';
+@import './pages/About/About.scss';
+@import './pages/OurStore/OurStore.scss';
+@import './components/SectionTitle/SectionTitle.scss';
+@import './components/Footer/Footer.scss';
