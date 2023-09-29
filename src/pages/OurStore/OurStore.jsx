@@ -1,5 +1,5 @@
-import { SectionTitle } from '../../components/SectionTitle/SectionTitle';
-import { Subscription } from '../../components/Subscription/Subscription';
+import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
+import { Subscription } from "../../components/Subscription/Subscription";
 
 function OurStore() {
   return (
@@ -14,16 +14,178 @@ function OurStore() {
         </SectionTitle>
       </section>
       <section className="product-store">
-        {/*      <div className="product-item">
-          <a href="!#" className="product-item__image product-image">
-            <img src="./images/books/book_1.svg" alt="book_1" />
-          </a>
-          <div className="product-item__content-wrap">
-            <div className="product-item__title-wrap">
-              <h3 className="product-item__title">Atomic One’s</h3>
+        <div className="container">
+          <div className="product-store__wrap">
+            <div className="product-item ">
+              <a href="#!" className="product-item__image-wrap">
+                <div className="product-item__image">
+                  <img src="./images/books/book_1.svg" alt="book_1" />
+                </div>
+              </a>
+              <div className="product-item__listing">
+                <div className="product-item__detail">
+                  <a href="#!" className="product-item__title title">
+                    Atomic One’s
+                  </a>
+                  <div className="product-item__price">{`$ ${13.84} USD`}</div>
+                </div>
+                <div className="product-item__content">
+                  <p className="product-item__annotation">
+                    As the book contains theoretical content as well as solved
+                    questions.
+                  </p>
+                  <div className="product-item__format">
+                    <span className="marker"></span>
+                    <h3 className="title title_big">Printed Book</h3>
+                  </div>
+                  <button className="btn btn_transparent product-item__btn">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="product-item product-item_audio">
+              <a href="#!" className="product-item__image-wrap">
+                <div className="product-item__image">
+                  <img src="./images/books/book_1.svg" alt="book_1" />
+                </div>
+              </a>
+              <div className="product-item__listing">
+                <div className="product-item__detail">
+                  <a href="#!" className="product-item__title title">
+                    Atomic One’s
+                  </a>
+                  <div className="product-item__price">{`$ ${13.84} USD`}</div>
+                </div>
+                <div className="product-item__content">
+                  <p className="product-item__annotation">
+                    As the book contains theoretical content as well as solved
+                    questions.
+                  </p>
+                  <div className="product-item__format">
+                    <span className="marker"></span>
+                    <h3 className="title title_big">Printed Book</h3>
+                  </div>
+                  <button className="btn btn_transparent product-item__btn">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="product-item product-item_cd">
+              <a href="#!" className="product-item__image-wrap">
+                <div className="product-item__image">
+                  <img src="./images/books/book_1.svg" alt="book_1" />
+                </div>
+              </a>
+              <div className="product-item__listing">
+                <div className="product-item__detail">
+                  <a href="#!" className="product-item__title title">
+                    Atomic One’s
+                  </a>
+                  <div className="product-item__price">{`$ ${13.84} USD`}</div>
+                </div>
+                <div className="product-item__content">
+                  <p className="product-item__annotation">
+                    As the book contains theoretical content as well as solved
+                    questions.
+                  </p>
+                  <div className="product-item__format">
+                    <span className="marker"></span>
+                    <h3 className="title title_big">Printed Book</h3>
+                  </div>
+                  <button className="btn btn_transparent product-item__btn">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="product-item ">
+              <a href="#!" className="product-item__image-wrap">
+                <div className="product-item__image">
+                  <img src="./images/books/book_1.svg" alt="book_1" />
+                </div>
+              </a>
+              <div className="product-item__listing">
+                <div className="product-item__detail">
+                  <a href="#!" className="product-item__title title">
+                    Atomic One’s
+                  </a>
+                  <div className="product-item__price">{`$ ${13.84} USD`}</div>
+                </div>
+                <div className="product-item__content">
+                  <p className="product-item__annotation">
+                    As the book contains theoretical content as well as solved
+                    questions.
+                  </p>
+                  <div className="product-item__format">
+                    <span className="marker"></span>
+                    <h3 className="title title_big">Printed Book</h3>
+                  </div>
+                  <button className="btn btn_transparent product-item__btn">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="product-item product-item_audio">
+              <a href="#!" className="product-item__image-wrap">
+                <div className="product-item__image">
+                  <img src="./images/books/book_1.svg" alt="book_1" />
+                </div>
+              </a>
+              <div className="product-item__listing">
+                <div className="product-item__detail">
+                  <a href="#!" className="product-item__title title">
+                    Atomic One’s
+                  </a>
+                  <div className="product-item__price">{`$ ${13.84} USD`}</div>
+                </div>
+                <div className="product-item__content">
+                  <p className="product-item__annotation">
+                    As the book contains theoretical content as well as solved
+                    questions.
+                  </p>
+                  <div className="product-item__format">
+                    <span className="marker"></span>
+                    <h3 className="title title_big">Printed Book</h3>
+                  </div>
+                  <button className="btn btn_transparent product-item__btn">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="product-item product-item_cd">
+              <a href="#!" className="product-item__image-wrap">
+                <div className="product-item__image">
+                  <img src="./images/books/book_1.svg" alt="book_1" />
+                </div>
+              </a>
+              <div className="product-item__listing">
+                <div className="product-item__detail">
+                  <a href="#!" className="product-item__title title">
+                    Atomic One’s
+                  </a>
+                  <div className="product-item__price">{`$ ${13.84} USD`}</div>
+                </div>
+                <div className="product-item__content">
+                  <p className="product-item__annotation">
+                    As the book contains theoretical content as well as solved
+                    questions.
+                  </p>
+                  <div className="product-item__format">
+                    <span className="marker"></span>
+                    <h3 className="title title_big">Printed Book</h3>
+                  </div>
+                  <button className="btn btn_transparent product-item__btn">
+                    Order Now
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>*/}
+        </div>
       </section>
       <Subscription />
     </>
