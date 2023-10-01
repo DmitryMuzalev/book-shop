@@ -1,0 +1,148 @@
+.product-single {
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 60px;
+    @media (max-width: 1279px) {
+      gap: 30px;
+    }
+    @media (max-width: 991px) {
+      align-items: start;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image-wrap {
+    padding: 70px;
+    background-color: var(--blue-light);
+    @media (max-width: 1279px) {
+      padding: 30px;
+    }
+    @media (max-width: 991px) {
+      padding: 15px;
+    }
+    @media (max-width: 767px) {
+      width: 50%;
+      margin: 0 auto;
+    }
+    @media (max-width: 479px) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__detail {
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 5px;
+    @media (max-width: 991px) {
+      font-size: 24px;
+    }
+  }
+
+  &__cost {
+    color: var(--yellow);
+    font-size: 30px;
+    font-weight: var(--bold);
+    @media (max-width: 991px) {
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    padding: 20px 0 30px;
+  }
+  &__parameters {
+    margin-bottom: 30px;
+  }
+}
+
+.product-single-parameters {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  li {
+    color: var(--grey);
+    span {
+      color: var(--blue);
+      padding-right: 20px;
+    }
+  }
+}
+
+.product-single-cart {
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__count {
+    width: 120px;
+    height: 66px;
+    font-size: 1rem;
+    border: 2px solid var(--yellow);
+    background-color: transparent;
+    padding: 0 10px;
+    color: var(--black);
+    text-align: center;
+
+    &:focus,
+    &:active {
+      outline: none;
+      border-color: var(--blue-middle);
+    }
+  }
+
+  &__btn {
+    flex-grow: 1;
+  }
+}
+
+.product-information {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 80%;
+  margin: 0 auto;
+  &__tabs {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__btn {
+    min-width: 280px;
+    background-color: var(--blue-light);
+    border-color: var(--blue-light);
+    font-size: toRem(15);
+    text-transform: uppercase;
+    transition: all var(--t-duration);
+
+    &:hover,
+    &[data-active='true'] {
+      background-color: var(--blue);
+      border-color: var(--blue);
+      color: var(--white);
+    }
+
+    &[data-active='true'] {
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+}
