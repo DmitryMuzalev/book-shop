@@ -83,8 +83,10 @@
 .product-single-cart {
   &__form {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
+    @media (max-width: 479px) {
+      flex-direction: column;
+    }
   }
 
   &__count {
@@ -96,6 +98,10 @@
     padding: 0 10px;
     color: var(--black);
     text-align: center;
+
+    @media (max-width: 479px) {
+      width: 100%;
+    }
 
     &:focus,
     &:active {
@@ -117,32 +123,94 @@
   gap: 40px;
   width: 80%;
   margin: 0 auto;
+
+  @media (max-width: 1279px) {
+    padding-top: 80px;
+  }
+
+  @media (max-width: 991px) {
+    width: 100%;
+    padding-top: 60px;
+  }
+
   &__tabs {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
   }
 
   &__btn {
-    min-width: 280px;
+    min-width: 300px;
     background-color: var(--blue-light);
     border-color: var(--blue-light);
     font-size: toRem(15);
     text-transform: uppercase;
     transition: all var(--t-duration);
-
+    @media (max-width: 479px) {
+      width: 100%;
+    }
     &:hover,
-    &[data-active='true'] {
+    &[data-active="true"] {
       background-color: var(--blue);
       border-color: var(--blue);
       color: var(--white);
     }
 
-    &[data-active='true'] {
+    &[data-active="true"] {
       pointer-events: none;
     }
   }
 
   &__content {
     text-align: center;
+  }
+}
+
+.shop-trust {
+  background-color: var(--yellow);
+  padding: 100px 0;
+
+  @media (max-width: 1279px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 991px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 40px 0;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.shop-trust-item {
+  padding: 20px 10px;
+  flex: 1 1 33.333%;
+  min-width: 300px;
+  text-align: center;
+  &__icon {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--blue);
+  }
+
+  &__title {
+    padding: 20px 0 10px;
+    font-size: toRem(32);
+    @media (max-width: 1279px) {
+      font-size: toRem(28);
+    }
+  }
+
+  &__content {
+    color: var(--blue);
   }
 }
