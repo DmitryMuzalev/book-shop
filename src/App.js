@@ -1,6 +1,7 @@
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
-import { Articles } from "./pages/Articles/Articles";
+import { ArticleSingle } from "./pages/ArticleSingle/ArticleSingle";
+//import { Articles } from "./pages/Articles/Articles";
 //import { ProductSingle } from "./pages/ProductSingle/ProductSingle";
 //import { OurStore } from './pages/OurStore/OurStore';
 //import { About } from './pages/About/About';
@@ -14,7 +15,8 @@ function App() {
       {/*<About />*/}
       {/* <OurStore /> */}
       {/* <ProductSingle /> */}
-      <Articles />
+      {/* <Articles /> */}
+      <ArticleSingle />
       <Footer />
     </>
   );
