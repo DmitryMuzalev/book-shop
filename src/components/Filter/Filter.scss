@@ -1,0 +1,38 @@
+.filter {
+  width: 250px;
+  text-transform: capitalize;
+  font-family: var(--f-family-secondary);
+  color: var(--white);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--blue);
+  }
+
+  &__btn,
+  &__list {
+    border-radius: 5px;
+    box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &__list {
+    margin-top: 3px;
+    background-color: var(--blue);
+    padding: 20px 0;
+  }
+
+  &__item {
+    padding: 7px 20px;
+    transition: all var(--t-duration);
+    &:hover,
+    &:active {
+      background-color: var(--yellow);
+      color: var(--blue);
+    }
+  }
+}
