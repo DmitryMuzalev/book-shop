@@ -332,6 +332,14 @@ h6,
     @media (max-width: 991px) {
       font-size: toRem(40);
     }
+
+    @media (max-width: 767px) {
+      font-size: toRem(36);
+    }
+
+    @media (max-width: 479px) {
+      font-size: toRem(30);
+    }
   }
 
   &__text {

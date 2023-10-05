@@ -4,20 +4,22 @@ function ArticleSingle() {
   return (
     <>
       <section className="page-description">
-        <SectionTitle>
-          <h2
-            className="page-description__title"
-            style={{
-              textTransform: "none",
-              width: "700px",
-              margin: "0 auto",
-            }}
-          >
-            Many variations of pass majority have suffered
-          </h2>
-        </SectionTitle>
+        <div className="container">
+          <SectionTitle>
+            <h1
+              className="page-description__title"
+              style={{
+                textTransform: "none",
+                maxWidth: "700px",
+                margin: "0 auto",
+              }}
+            >
+              Many variations of pass majority have suffered
+            </h1>
+          </SectionTitle>
+        </div>
       </section>
-      <section className="article-single">
+      <section className="article-single section-wrap">
         <div className="container">
           <div className="article-single__wrap">
             <div className="article-single__banner">
@@ -44,10 +46,10 @@ function ArticleSingle() {
               <p>
                 Appropriately empower dynamic leadership skills after business
                 portals. Globally my coordinate interactive supply chains with
-                distinctive <a href="#!">quality vectors global sources</a>
+                distinctive <a href="#!">quality vectors global sources </a>
                 services. Uniquely matrix economically sound value through
                 cooperative technology. Competently parallel task fully
-                researched data and
+                researched data and <em>enterprise process improvements.</em>
               </p>
               <ul>
                 <li>
