@@ -3,7 +3,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -88,7 +88,7 @@ function Footer() {
                 </div>
                 <div className="footer-contact-item__content">
                   <p>
-                    24A Kingston St, Los Vegas <br />
+                    24A Kingston St, Las Vegas <br />
                     NC 28202, USA.
                   </p>
                 </div>
@@ -110,7 +110,7 @@ function Footer() {
         </div>
         <div className="copyright">
           <p className="copyright__text">
-            © Drafted by <a href="#!">VictorFlow</a> - Powered by{" "}
+            © Drafted by <a href="#!">VictorFlow</a> - Powered by{' '}
             <a href="#!">Webflow</a>
           </p>
         </div>

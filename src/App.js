@@ -1,6 +1,7 @@
-import { Footer } from "./components/Footer/Footer";
-import { Header } from "./components/Header/Header";
-import { ArticleSingle } from "./pages/ArticleSingle/ArticleSingle";
+import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
+//import { ArticleSingle } from './pages/ArticleSingle/ArticleSingle';
+import { ContactUs } from './pages/ContactUs/ContactUs';
 //import { Articles } from "./pages/Articles/Articles";
 //import { ProductSingle } from "./pages/ProductSingle/ProductSingle";
 //import { OurStore } from './pages/OurStore/OurStore';
@@ -16,7 +17,8 @@ function App() {
       {/* <OurStore /> */}
       {/* <ProductSingle /> */}
       {/* <Articles /> */}
-      <ArticleSingle />
+      {/*   <ArticleSingle />*/}
+      <ContactUs />
       <Footer />
     </>
   );
