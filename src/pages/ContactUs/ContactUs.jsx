@@ -1,4 +1,4 @@
-import { SectionTitle } from '../../components/SectionTitle/SectionTitle';
+import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
 
 function ContactUs() {
   return (
@@ -15,7 +15,7 @@ function ContactUs() {
           </SectionTitle>
         </div>
       </section>
-      <section className="contact-us">
+      <section className="contact-us section-wrap">
         <div className="container">
           <div className="contact-us__wrap">
             <div className="contact-us__content-wrap">
@@ -98,7 +98,7 @@ function ContactUs() {
                   />
                 </div>
                 <div className="contact-form-field">
-                  <div className="contact-form-field__icon">
+                  <div className="contact-form-field__icon textarea-field-icon">
                     <img src="./images/icons/edit.svg" alt="edit" />
                   </div>
                   <textarea
@@ -107,9 +107,13 @@ function ContactUs() {
                   />
                 </div>
                 <label className="checkbox-field">
+                  <input
+                    type="checkbox"
+                    name="subscription"
+                    className="checkbox-field__checkbox"
+                  />
                   <div className="checkbox-field__custom-checkbox"></div>
-                  <input type="checkbox" name="subscription" />
-                  <span for="subscription">
+                  <span>
                     Keep me up to date with news and offers from time to time by
                     email
                   </span>

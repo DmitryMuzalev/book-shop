@@ -1,0 +1,168 @@
+.contact-us {
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  &__content-wrap {
+    margin-top: 20px;
+  }
+
+  &__form {
+  }
+}
+
+.keep-touch-detail {
+  margin-top: 50px;
+}
+
+.keep-touch-detail-item {
+  display: flex;
+  gap: 30px;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 65px;
+    background-color: var(--blue);
+  }
+
+  &__content-wrap {
+    a {
+      text-transform: none;
+      color: var(--grey);
+      &:hover {
+        color: var(--yellow);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__row {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__btn {
+  }
+}
+
+.contact-form-field {
+  position: relative;
+  width: 100%;
+
+  &__icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+
+  &__item {
+    width: 100%;
+  }
+}
+
+.input-field {
+  min-height: 70px;
+  padding-left: 50px;
+  padding-right: 10px;
+  border: 1px solid var(--grey-light);
+  color: var(--grey);
+  font-family: var(--f-family-primary);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: var(--yellow);
+  }
+}
+
+.textarea-field {
+  padding-top: 20px;
+  min-height: 180px;
+  max-height: 650px;
+  resize: vertical;
+}
+.textarea-field-icon {
+  top: 32px;
+}
+
+.checkbox-field {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  cursor: pointer;
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    &:focus + .checkbox-field__custom-checkbox {
+      box-shadow: 0 0 3px 1px #3898ec;
+    }
+    &:checked + .checkbox-field__custom-checkbox {
+      background-color: var(--yellow);
+      border-color: var(--yellow);
+    }
+    &:checked + .checkbox-field__custom-checkbox::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &__custom-checkbox {
+    flex-shrink: 0;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--grey-light);
+    border-radius: 5px;
+    background-color: var(--white);
+    transition: all var(--t-duration);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      transform: translate(-50%, -50%) scale(0);
+      background: url("../../../public/images/icons/checkbox-mark.svg")
+        no-repeat center / contain;
+      transition: all var(--t-duration);
+    }
+  }
+
+  span {
+    color: var(--grey);
+    font-size: 17px;
+  }
+}
