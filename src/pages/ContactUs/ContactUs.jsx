@@ -36,7 +36,7 @@ function ContactUs() {
                     <h3 className="keep-touch-detail-item__title title_big">
                       visit us:
                     </h3>
-                    <p>24A Kingston St, Las Vegas</p>
+                    <p>24A Kingston St, Las Vegas NC 28202, USA.</p>
                   </div>
                 </div>
                 <div className="keep-touch-detail-item">

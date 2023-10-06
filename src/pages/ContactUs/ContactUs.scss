@@ -3,10 +3,22 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    @media (max-width: 1279px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__content-wrap {
     margin-top: 20px;
+    @media (max-width: 1279px) {
+      margin-top: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__form {
@@ -15,11 +27,18 @@
 
 .keep-touch-detail {
   margin-top: 50px;
+  @media (max-width: 1279px) {
+    margin-top: 0;
+  }
 }
 
 .keep-touch-detail-item {
   display: flex;
   gap: 30px;
+
+  @media (max-width: 767px) {
+    gap: 15px;
+  }
 
   &:not(:last-child) {
     margin-bottom: 25px;
@@ -58,6 +77,9 @@
   &__row {
     display: flex;
     gap: 20px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 
   &__btn {
@@ -116,6 +138,11 @@
   display: flex;
   gap: 10px;
   align-items: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: start;
+  }
 
   cursor: pointer;
   &__checkbox {
