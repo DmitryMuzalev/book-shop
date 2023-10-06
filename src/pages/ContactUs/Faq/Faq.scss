@@ -1,0 +1,9 @@
+.faq {
+  background-color: var(--blue-light);
+
+  &__accordion {
+    display: block;
+    margin: 0 auto;
+    width: 820px;
+  }
+}

@@ -1,4 +1,5 @@
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
+import { Faq } from "./Faq/Faq";
 
 function ContactUs() {
   return (
@@ -128,13 +129,7 @@ function ContactUs() {
           </div>
         </div>
       </section>
-      <section className="faq">
-        <div className="container">
-          <SectionTitle>
-            <h2>frequent questions?</h2>
-          </SectionTitle>
-        </div>
-      </section>
+      <Faq />
     </>
   );
 }
