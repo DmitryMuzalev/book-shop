@@ -1,7 +1,8 @@
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
+import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 //import { ArticleSingle } from './pages/ArticleSingle/ArticleSingle';
-import { ContactUs } from './pages/ContactUs/ContactUs';
+//import { ContactUs } from './pages/ContactUs/ContactUs';
 //import { Articles } from "./pages/Articles/Articles";
 //import { ProductSingle } from "./pages/ProductSingle/ProductSingle";
 //import { OurStore } from './pages/OurStore/OurStore';
@@ -18,7 +19,8 @@ function App() {
       {/* <ProductSingle /> */}
       {/* <Articles /> */}
       {/*   <ArticleSingle />*/}
-      <ContactUs />
+      {/*    <ContactUs />*/}
+      <NotFoundPage />
       <Footer />
     </>
   );

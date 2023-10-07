@@ -72,9 +72,6 @@ function Footer() {
               <a href="#!" className="footer-widget__link">
                 404 Not Found
               </a>
-              <a href="#!" className="footer-widget__link">
-                Password Protected
-              </a>
             </div>
           </div>
           <div className="footer__column footer-widget">

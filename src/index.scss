@@ -154,6 +154,7 @@ h6,
 
 //_Buttons::
 .btn {
+  display: inline-block;
   cursor: pointer;
   font-size: 1rem;
   font-family: var(--f-family-secondary);
@@ -365,3 +366,4 @@ h6,
 @import './pages/ContactUs/ContactUs.scss';
 @import './components/Accordion/Accordion.scss';
 @import './pages/ContactUs/Faq/Faq.scss';
+@import './pages/NotFoundPage/NotFoundPage.scss';
