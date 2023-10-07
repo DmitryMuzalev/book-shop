@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { FaAngleDown } from "react-icons/fa";
+import { motion } from 'framer-motion';
+import { FaAngleDown } from 'react-icons/fa';
 
 function NavigationMenu({ toggleDropMenu, isShowDropMenu }) {
   return (
@@ -47,12 +47,6 @@ function NavigationMenu({ toggleDropMenu, isShowDropMenu }) {
               </a>
               <a href="#!" className="dropdown-menu__link">
                 404 Page
-              </a>
-              <a href="#!" className="dropdown-menu__link">
-                password protected
-              </a>
-              <a href="#!" className="dropdown-menu__link">
-                changelog
               </a>
             </div>
           </nav>

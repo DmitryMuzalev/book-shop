@@ -2,8 +2,9 @@
   background-color: var(--blue-light);
 
   &__accordion {
+    padding-top: 40px;
     display: block;
     margin: 0 auto;
-    width: 820px;
+    max-width: 820px;
   }
 }

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { AccordionItem } from "./AccordionItem/AccordionItem";
+import { useState } from 'react';
+import { AccordionItem } from './AccordionItem/AccordionItem';
 
 function Accordion({ list }) {
   const [openItem, setOpenItem] = useState(null);
@@ -11,6 +11,7 @@ function Accordion({ list }) {
     <ul className="accordion">
       {list.map((item) => (
         <AccordionItem
+          currentItem={openItem}
           onClick={() => handlerAccordionItem(item.id)}
           {...item}
           key={item.id}

@@ -1,13 +1,47 @@
 .accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .accordion-item {
+  border-bottom: 1px solid var(--grey-middle);
+
   &__question {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 15px 50px 15px 0;
+  }
+
+  &__toggle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: height 0.5s;
   }
 
   &__answer-wrap {
+    height: 0;
+    transition: height 0.5s;
+    overflow: hidden;
+  }
+
+  &.open {
+    .accordion-item__answer-wrap {
+      height: auto;
+    }
+    .accordion-item__toggle {
+      transform: translateY(-50%) rotate(180deg);
+    }
   }
 
   &__answer {
+    padding: 0 20px 30px;
   }
 }
