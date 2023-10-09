@@ -1,14 +1,11 @@
 import { clsx } from "clsx";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaShoppingCart,
-} from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { NavigationMenu } from "./NavigationMenu/NavigationMenu";
 import { AnimatePresence } from "framer-motion";
+import { Logo } from "../Logo/Logo";
+import { SocialLinks } from "../SocialLinks/SocialLinks";
 
 function Header() {
   const stylesHeaderButton = clsx("btn", "header__btn");
@@ -24,29 +21,8 @@ function Header() {
       <div className="container">
         <div className="header__wrap">
           <div className="header__logo-wrap">
-            <a href="#!" className="logo header__logo">
-              <img src="./images/logo.svg" alt="logo" />
-            </a>
-            <div className="social-links">
-              <a
-                href="#!"
-                className="social-links__item social-links__item_full"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="#!"
-                className="social-links__item social-links__item_full"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="#!"
-                className="social-links__item social-links__item_full"
-              >
-                <FaLinkedinIn />
-              </a>
-            </div>
+            <Logo classes="header__logo" />
+            <SocialLinks classes={"social-links_full"} />
           </div>
           <div className="header__nav-menu-wrap">
             {!isTabletOrMobile && (

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap");
 //_SCSS Functions:
 @function toRem($value) {
   $remValue: ($value / 19) + rem;
@@ -68,8 +68,8 @@ ul {
   --grey-light: #dce1e9;
 
   //_Fonts:
-  --f-family-primary: 'Inter', sans-serif;
-  --f-family-secondary: 'Cardo', serif;
+  --f-family-primary: "Inter", sans-serif;
+  --f-family-secondary: "Cardo", serif;
 
   --regular: 400;
   --medium: 500;
@@ -193,51 +193,6 @@ h6,
   }
 }
 
-//_Social network link:
-.social-links {
-  display: flex;
-  gap: 10px;
-
-  &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: toRem(16);
-    transition: all var(--t-duration);
-    border: 2px solid;
-
-    @media (max-width: 479px) {
-      font-size: toRem(15);
-    }
-
-    &_full {
-      height: toEm(45, 16);
-      width: toEm(45, 16);
-      background-color: var(--white);
-      border-color: var(--white);
-
-      &:hover {
-        background-color: var(--yellow);
-        border-color: var(--yellow);
-        color: var(--blue);
-      }
-    }
-
-    &_contour {
-      height: toEm(55, 16);
-      width: toEm(55, 16);
-      border-color: var(--yellow);
-      background-color: transparent;
-      color: var(--white);
-
-      &:hover {
-        background-color: var(--yellow);
-        color: var(--white);
-      }
-    }
-  }
-}
-
 //_Marker:
 .marker {
   display: inline-block;
@@ -350,20 +305,21 @@ h6,
 }
 
 //_Importing component styles:
-@import './components/Header/Header.scss';
-@import './components/Partners/Partners.scss';
-@import './components/AuthorsBook/AuthorsBook.scss';
-@import './components/Subscription/Subscription.scss';
-@import './pages/Home/Home.scss';
-@import './pages/About/About.scss';
-@import './pages/OurStore/OurStore.scss';
-@import './components/SectionTitle/SectionTitle.scss';
-@import './pages/ProductSingle/ProductSingle.scss';
-@import './pages/Articles/Articles.scss';
-@import './components/Footer/Footer.scss';
-@import './components/Filter/Filter.scss';
-@import './pages/ArticleSingle/ArticleSingle.scss';
-@import './pages/ContactUs/ContactUs.scss';
-@import './components/Accordion/Accordion.scss';
-@import './pages/ContactUs/Faq/Faq.scss';
-@import './pages/NotFoundPage/NotFoundPage.scss';
+@import "./components/Header/Header.scss";
+@import "./components/Partners/Partners.scss";
+@import "./components/AuthorsBook/AuthorsBook.scss";
+@import "./components/Subscription/Subscription.scss";
+@import "./pages/Home/Home.scss";
+@import "./pages/About/About.scss";
+@import "./pages/OurStore/OurStore.scss";
+@import "./components/SectionTitle/SectionTitle.scss";
+@import "./pages/ProductSingle/ProductSingle.scss";
+@import "./pages/Articles/Articles.scss";
+@import "./components/Footer/Footer.scss";
+@import "./components/Filter/Filter.scss";
+@import "./pages/ArticleSingle/ArticleSingle.scss";
+@import "./pages/ContactUs/ContactUs.scss";
+@import "./components/Accordion/Accordion.scss";
+@import "./pages/ContactUs/Faq/Faq.scss";
+@import "./pages/NotFoundPage/NotFoundPage.scss";
+@import "./components/SocialLinks/SocialLinks.scss";

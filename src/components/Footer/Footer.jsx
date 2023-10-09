@@ -1,9 +1,5 @@
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-} from 'react-icons/fa';
+import { Logo } from "../Logo/Logo";
+import { SocialLinks } from "../SocialLinks/SocialLinks";
 
 function Footer() {
   return (
@@ -11,35 +7,8 @@ function Footer() {
       <div className="container">
         <div className="footer__wrap">
           <div className="footer__column footer-widget">
-            <a href="!#" className="logo footer__logo">
-              <img src="./images/logo.svg" alt="logo" />
-            </a>
-            <div className="social-links">
-              <a
-                href="#!"
-                className="social-links__item social-links__item_contour"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="#!"
-                className="social-links__item social-links__item_contour"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="#!"
-                className="social-links__item social-links__item_contour"
-              >
-                <FaLinkedinIn />
-              </a>
-              <a
-                href="#!"
-                className="social-links__item social-links__item_contour"
-              >
-                <FaInstagram />
-              </a>
-            </div>
+            <Logo />
+            <SocialLinks classes={"social-links_contour"} />
           </div>
           <div className="footer__column footer-widget">
             <h3 className="footer-widget__title title title_big">Explore</h3>
@@ -107,7 +76,7 @@ function Footer() {
         </div>
         <div className="copyright">
           <p className="copyright__text">
-            © Drafted by <a href="#!">VictorFlow</a> - Powered by{' '}
+            © Drafted by <a href="#!">VictorFlow</a> - Powered by{" "}
             <a href="#!">Webflow</a>
           </p>
         </div>
