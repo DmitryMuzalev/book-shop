@@ -1,0 +1,27 @@
+.footer-contact {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 10px;
+
+  &__label {
+    min-width: 85px;
+  }
+
+  &__content {
+    a {
+      color: var(--blue-middle);
+      text-transform: none;
+    }
+    a:hover {
+      color: var(--yellow);
+    }
+  }
+}

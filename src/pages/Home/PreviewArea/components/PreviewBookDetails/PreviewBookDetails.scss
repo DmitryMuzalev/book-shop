@@ -1,0 +1,30 @@
+.preview-book-details-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media (max-width: 479px) {
+    justify-content: start;
+  }
+}
+
+.book-details-item {
+  display: flex;
+  column-gap: 10px;
+  padding-bottom: 20px;
+
+  &__title {
+    line-height: 1;
+    margin-bottom: toEm(10, 24);
+  }
+
+  &__marker {
+    margin-top: 3px;
+  }
+
+  &__content {
+    color: var(--blue-middle);
+    line-height: 170%;
+  }
+}

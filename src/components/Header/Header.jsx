@@ -1,20 +1,18 @@
-import { clsx } from "clsx";
-import { FaShoppingCart } from "react-icons/fa";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { NavigationMenu } from "./NavigationMenu/NavigationMenu";
 import { AnimatePresence } from "framer-motion";
+
 import { Logo } from "../Logo/Logo";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
+import { Button } from "../Button/Button";
+import { CartBtn } from "../Cart/Cart";
+
+import { MenuBtn } from "./components/MenuBtn/MenuBtn";
+import { NavigationMenu } from "./components/NavigationMenu/NavigationMenu";
 
 function Header() {
-  const stylesHeaderButton = clsx("btn", "header__btn");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991px)" });
-  const [isShowDropMenu, setIsShowDropMenu] = useState(false);
   const [isShowNavMenu, setIsNavMenu] = useState(false);
-
-  const toggleDropMenu = () => setIsShowDropMenu(!isShowDropMenu);
-  const toggleNavMenu = () => setIsNavMenu(!isShowNavMenu);
 
   return (
     <header className="header">
@@ -25,41 +23,21 @@ function Header() {
             <SocialLinks classes={"social-links_full"} />
           </div>
           <div className="header__nav-menu-wrap">
-            {!isTabletOrMobile && (
-              <NavigationMenu
-                toggleDropMenu={toggleDropMenu}
-                isShowDropMenu={isShowDropMenu}
-              />
-            )}
-            <a href="#!" className="shopping-cart-button">
-              <FaShoppingCart />
-              <div className="shopping-cart-button__count">1</div>
-            </a>
-            <button type="button" className={stylesHeaderButton}>
-              order today
-            </button>
-            <div
-              className="header__menu-button"
-              onClick={toggleNavMenu}
-              data-active={isShowNavMenu}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+            {!isTabletOrMobile && <NavigationMenu />}
+            <CartBtn classes="header__shopping-cart-btn" />
+            <Button classes="header__btn">order today</Button>
+            <MenuBtn
+              isActive={isShowNavMenu}
+              onClick={() => setIsNavMenu(!isShowNavMenu)}
+            />
           </div>
-
           <AnimatePresence>
-            {isTabletOrMobile && isShowNavMenu && (
-              <NavigationMenu
-                toggleDropMenu={toggleDropMenu}
-                isShowDropMenu={isShowDropMenu}
-              />
-            )}
+            {isTabletOrMobile && isShowNavMenu && <NavigationMenu />}
           </AnimatePresence>
         </div>
       </div>
     </header>
   );
 }
+
 export { Header };

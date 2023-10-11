@@ -1,4 +1,17 @@
+import { Button } from "../../../components/Button/Button";
+import { PreviewBookDetails } from "./components/PreviewBookDetails/PreviewBookDetails";
+
 function PreviewArea() {
+  const previewBook = {
+    title: "The dark light",
+    cover: "./images/books/book_2.svg",
+    parameters: {
+      pages: "250pages",
+      length: "10 hours",
+      rating: "4.5/5 (305 ratings)",
+    },
+  };
+
   return (
     <section className="preview-area">
       <div className="container">
@@ -9,7 +22,7 @@ function PreviewArea() {
             </p>
             <div className="preview-area__title-wrap">
               <h1 className="preview-area__title title">
-                Books are uniquely <br /> portable magic
+                Books are uniquely portable magic
               </h1>
               <div className="preview-area__content">
                 <p>
@@ -19,48 +32,16 @@ function PreviewArea() {
                 </p>
               </div>
             </div>
+
             <div className="preview-area__buttons-wrap">
-              <button type="button" className="btn preview-area__btn">
-                order today
-              </button>
-              <a href="#!" className="dowland-link">
-                read free demo
-              </a>
+              <Button classes="preview-area__btn">order today</Button>
+              <Button classes="btn_download">read free demo</Button>
             </div>
-            <div className="preview-book-details-wrap">
-              <div className="book-details-item">
-                <span className="marker book-details-item__marker"></span>
-                <div className="book-details-item__content-wrap">
-                  <h2 className="book-details-item__title title title_big">
-                    Pages:
-                  </h2>
-                  <p className="book-details-item__content">250pages</p>
-                </div>
-              </div>
-              <div className="book-details-item">
-                <span className="marker book-details-item__marker"></span>
-                <div className="book-details-item__content-wrap">
-                  <h2 className="book-details-item__title title title_big">
-                    Length:
-                  </h2>
-                  <p className="book-details-item__content">10 Hours</p>
-                </div>
-              </div>
-              <div className="book-details-item">
-                <span className="marker book-details-item__marker"></span>
-                <div className="book-details-item__content-wrap">
-                  <h2 className="book-details-item__title title title_big">
-                    Rating:
-                  </h2>
-                  <p className="book-details-item__content">
-                    4.5/5 (305 ratings)
-                  </p>
-                </div>
-              </div>
-            </div>
+
+            <PreviewBookDetails details={previewBook.parameters} />
           </div>
           <div className="preview-area__image-wrap">
-            <img src="./images/books/book_2.svg" alt="" />
+            <img src={previewBook.cover} alt={previewBook.title} />
           </div>
         </div>
       </div>

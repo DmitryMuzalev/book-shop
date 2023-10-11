@@ -1,0 +1,65 @@
+//_Buttons::
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--f-family-secondary);
+  text-transform: capitalize;
+  line-height: 125%;
+  font-weight: var(--bold);
+  letter-spacing: 0.38px;
+  padding: toEm(20, 19) toEm(56, 19);
+  background-color: var(--yellow);
+  color: var(--blue);
+  border: 2px solid var(--yellow);
+  transition: background-color var(--t-duration);
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &_transparent {
+    background-color: transparent;
+    &:hover {
+      background-color: var(--yellow);
+    }
+  }
+
+  &_large {
+    padding: toEm(20, 19) toEm(96, 19);
+
+    @media (max-width: 767px) {
+      font-size: toRem(17);
+    }
+
+    @media (max-width: 479px) {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+  &_download {
+    position: relative;
+    color: var(--white);
+    background-color: transparent;
+    padding: 0 3px 3px 0;
+    border: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--white);
+      transition: background-color var(--t-duration);
+    }
+
+    &:hover {
+      &::before {
+        background-color: var(--yellow);
+      }
+    }
+  }
+}

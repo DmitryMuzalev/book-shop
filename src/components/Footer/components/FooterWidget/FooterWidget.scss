@@ -1,0 +1,17 @@
+.footer-widget {
+  &__links-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__link {
+    position: relative;
+    color: var(--blue-middle);
+    line-height: 170%;
+    padding-left: 40px;
+    background: url("../../../../../public/images/other/footer-link-marker.svg")
+      no-repeat;
+    background-position: 0 50%;
+  }
+}

@@ -1,0 +1,53 @@
+.business-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  background-color: var(--blue);
+
+  @media (max-width: 767px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 479px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  &__qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+
+    img {
+      width: 130px;
+      padding: 15px;
+    }
+  }
+
+  &__title {
+    font-size: toRem(22);
+    color: var(--yellow);
+    margin-bottom: toEm(10, 22);
+
+    @media (max-width: 767px) {
+      font-size: toRem(20);
+    }
+  }
+
+  &__contact {
+    margin-bottom: toEm(5, 19);
+
+    p,
+    a {
+      text-transform: none;
+      color: var(--blue-middle);
+    }
+
+    a {
+      padding-left: toEm(10, 19);
+    }
+  }
+}

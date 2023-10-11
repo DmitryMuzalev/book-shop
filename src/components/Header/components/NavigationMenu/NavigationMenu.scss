@@ -1,0 +1,39 @@
+.nav-menu {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    font-size: toRem(17);
+    padding: toEm(22, 17) toEm(20, 17);
+    color: var(--white);
+    font-weight: var(--medium);
+
+    &[data-active] {
+      color: var(--yellow);
+    }
+
+    @media (max-width: 1280px) {
+      font-size: toRem(16);
+      padding: toEm(15, 16) toEm(20, 16);
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 20px 0;
+    z-index: 5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    background-color: rgba(20, 20, 20, 0.95);
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__link {
+      width: 100%;
+    }
+  }
+}
+
+@import "./Dropdown/Dropdown.scss";

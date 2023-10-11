@@ -1,20 +1,36 @@
+import { Frame } from "../../../components/Frame/Frame";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
+import { BusinessCard } from "./components/BusinessCard/BusinessCard";
+import { AboutAuthorDetails } from "./components/AboutAuthorDetails/AboutAuthorDetails";
+
 function AboutAuthor() {
+  const authorData = {
+    name: "John Abraham , Ph.d",
+    avatar: "./images/photos/avatar_about_author.jpg",
+    contacts: {
+      email: "johnabraham@gmail.com",
+      phone: "(+2) 123 545 9000",
+      qrCode: "./images/other/qr_code.svg",
+    },
+    details: {
+      quantityBooks: 2,
+      rating: 4.5,
+      awards: 4,
+    },
+  };
+
   return (
     <section className="about-author section-wrap">
       <div className="container">
         <div className="about-author__wrap section-grid">
-          <div className="about-author__image-wrap frame">
-            <div className="frame__border">
-              <img
-                src="./images/photos/avatar_about_author.jpg"
-                alt="Author name"
-              />
-            </div>
-          </div>
+          <Frame
+            classes="about-author__image-wrap"
+            image={authorData.avatar}
+            label={authorData.name}
+          />
           <div className="about-author__content-wrap">
-            <SectionTitle isLeft={true}>
+            <SectionTitle classes="section-title_left">
               <h2>About the Author</h2>
               <p>
                 We believe that bookstores are essential to a healthy culture.
@@ -23,51 +39,12 @@ function AboutAuthor() {
                 reading that can last a lifetime.
               </p>
             </SectionTitle>
-            <div className="about-author__details">
-              <div className="about-author__details-item">
-                <div className="about-author-detail">
-                  <div className="about-author-detail__content title">02</div>
-                  <h3 className="about-author-detail__title">
-                    Books Published
-                  </h3>
-                </div>
-              </div>
-              <div className="about-author__details-item">
-                <div className="about-author-detail">
-                  <div className="about-author-detail__content title">4.5</div>
-                  <h3 className="about-author-detail__title">User Reviews</h3>
-                </div>
-              </div>
-              <div className="about-author__details-item">
-                <div className="about-author-detail">
-                  <div className="about-author-detail__content title">04</div>
-                  <h3 className="about-author-detail__title">
-                    Best Seller Awards
-                  </h3>
-                </div>
-              </div>
-            </div>
-            <div className="about-author__business-card business-card">
-              <div className="business-card__qr-code">
-                <img src="./images/other/qr_code.svg" alt="QR-code" />
-              </div>
-              <div className="business-card__content-wrap">
-                <h3 className="business-card__title">John Abraham , Ph.d</h3>
-                <div className="business-card__contact">
-                  <p>
-                    Mail:
-                    <a href="mailto:johnabraham@gmail.com">
-                      johnabraham@gmail.com
-                    </a>
-                  </p>
-                </div>
-                <div className="business-card__contact">
-                  <p>
-                    Phone: <a href="tel:(+2) 123 545 9000">(+2) 123 545 9000</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <AboutAuthorDetails {...authorData.details} />
+            <BusinessCard
+              classes="about-author__business-card"
+              name={authorData.name}
+              {...authorData.contacts}
+            />
           </div>
         </div>
       </div>
