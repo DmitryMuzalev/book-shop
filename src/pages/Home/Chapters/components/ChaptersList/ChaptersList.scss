@@ -1,0 +1,46 @@
+.chapters-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chapter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 40px 20px;
+  background-color: var(--white);
+
+  &__content {
+    flex-grow: 1;
+  }
+}
+
+.chapter-details {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chapter-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__content-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    color: var(--blue);
+  }
+}

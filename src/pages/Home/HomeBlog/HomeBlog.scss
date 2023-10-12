@@ -1,7 +1,12 @@
 .home-blog {
   background-color: var(--blue-light);
-
   &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    @media (max-width: 991px) {
+      gap: 30px;
+    }
   }
 
   &__content-wrap {

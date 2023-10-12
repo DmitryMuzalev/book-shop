@@ -1,21 +1,24 @@
 import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 
-function Filter({ onChangeCurrentValue, currentValue, options }) {
+function ArticlesFilter({ currentValue, options, onChangeCurrentValue }) {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="filter">
-      <div className="filter__btn" onClick={() => setIsActive(!isActive)}>
+    <div className="articles-filter">
+      <div
+        className="articles-filter__btn"
+        onClick={() => setIsActive(!isActive)}
+      >
         <span>{currentValue}</span>
         <FaAngleDown />
       </div>
       {isActive && (
-        <div className="filter__list">
+        <div className="articles-filter__list">
           {options.map((option, i) => (
             <div
               key={i}
-              className="filter__item"
+              className="articles-filter__item"
               onClick={() => {
                 onChangeCurrentValue(option);
                 setIsActive(false);
@@ -29,4 +32,4 @@ function Filter({ onChangeCurrentValue, currentValue, options }) {
     </div>
   );
 }
-export { Filter };
+export { ArticlesFilter };

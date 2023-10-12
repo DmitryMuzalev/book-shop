@@ -1,0 +1,18 @@
+.chapters-free-trail {
+  text-align: center;
+  p {
+    a {
+      &:hover {
+        color: var(--blue);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+    &:hover {
+      color: inherit;
+    }
+  }
+}

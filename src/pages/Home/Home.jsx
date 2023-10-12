@@ -3,7 +3,7 @@ import { AboutAuthor } from "./AboutAuthor/AboutAuthor";
 import { Partners } from "../../components/Partners/Partners";
 import { Order } from "./Order/Order";
 import { Learn } from "./Learn/Learn";
-import { Chapter } from "./Chapter/Chapter";
+import { Chapters } from "./Chapters/Chapters";
 import { PreviewArea } from "./PreviewArea/PreviewArea";
 import { Testimonial } from "./Testimonial/Testimonial";
 import { HomeBlog } from "./HomeBlog/HomeBlog";
@@ -18,7 +18,7 @@ function Home() {
       <Partners />
       <Order />
       <Learn />
-      <Chapter />
+      <Chapters />
       <Testimonial />
       <HomeBlog />
       <Subscription />

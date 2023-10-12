@@ -1,4 +1,8 @@
-.filter {
+.articles-filter {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: 0;
   width: 250px;
   text-transform: capitalize;
   font-family: var(--f-family-secondary);

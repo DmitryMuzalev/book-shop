@@ -200,32 +200,6 @@ h6,
   }
 }
 
-//_Image border:
-.frame {
-  @media (max-width: 1279px) {
-    max-width: 50%;
-  }
-
-  @media (max-width: 991px) {
-    max-width: 100%;
-  }
-
-  &__border {
-    margin-left: 10px;
-    margin-top: 20px;
-    border: 10px solid var(--yellow);
-
-    img {
-      position: relative;
-      width: 100%;
-      top: -20px;
-      right: 20px;
-      z-index: 2;
-      box-shadow: 0 0 20px 0 rgba(27, 55, 100, 0.3);
-    }
-  }
-}
-
 //_Page description
 .page-description {
   padding: 80px 0 120px;
@@ -270,19 +244,21 @@ h6,
 @import "./components/SectionTitle/SectionTitle.scss";
 
 @import "./components/Header/Header.scss";
+@import "./components/Footer/Footer.scss";
+@import "./components/Articles/Articles.scss";
+
 @import "./components/AuthorsBook/AuthorsBook.scss";
 @import "./components/Subscription/Subscription.scss";
 @import "./components/Partners/Partners.scss";
-@import "./components/Filter/Filter.scss";
-@import "./components/Footer/Footer.scss";
 @import "./components/Accordion/Accordion.scss";
 @import "./components/Cart/Cart.scss";
+@import "./components/Frame/Frame.scss";
 
 @import "./pages/Home/Home.scss";
-@import "./pages/About/About.scss";
+@import "./pages/Blog/Blog.scss";
 @import "./pages/OurStore/OurStore.scss";
 @import "./pages/ProductSingle/ProductSingle.scss";
-@import "./pages/Articles/Articles.scss";
+//@import "./pages/Articles/Articles.scss";
 @import "./pages/ArticleSingle/ArticleSingle.scss";
 @import "./pages/ContactUs/ContactUs.scss";
 @import "./pages/ContactUs/Faq/Faq.scss";

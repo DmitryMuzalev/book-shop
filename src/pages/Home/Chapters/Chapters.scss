@@ -1,0 +1,13 @@
+.chapter {
+  background-color: var(--blue-light);
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+@import "./components/ChaptersList/ChaptersList.scss";
+@import "./components/ChaptersFreeTrail/ChaptersFreeTrail.scss";
