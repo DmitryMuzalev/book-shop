@@ -1,32 +1,20 @@
 .authors-book {
   &__content {
-    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width: 1279px) {
+      gap: 40px;
+    }
 
     @media (max-width: 767px) {
-      margin-top: 30px;
-    }
-
-    @media (max-width: 479px) {
-      margin-top: 20px;
+      flex-direction: column;
     }
   }
 }
 
-.book-collection {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-
-  @media (max-width: 1279px) {
-    gap: 40px;
-  }
-
-  @media (max-width: 767px) {
-    flex-direction: column;
-  }
-}
-
-.book-collection-item {
+.authors-book-item {
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -131,5 +119,8 @@
 
   &__btn {
     align-self: start;
+    &:hover {
+      color: inherit;
+    }
   }
 }

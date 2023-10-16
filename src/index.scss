@@ -237,6 +237,12 @@ h6,
   }
 }
 
+.bg {
+  &_bl {
+    background-color: var(--blue-light);
+  }
+}
+
 //_Importing component styles:
 
 @import "./components/Button/Button.scss";
@@ -247,7 +253,8 @@ h6,
 @import "./components/Footer/Footer.scss";
 @import "./components/Articles/Articles.scss";
 
-@import "./components/AuthorsBook/AuthorsBook.scss";
+@import "./components/PreviewAuthorsBook/PreviewAuthorsBook.scss";
+
 @import "./components/Subscription/Subscription.scss";
 @import "./components/Partners/Partners.scss";
 @import "./components/Accordion/Accordion.scss";
@@ -258,8 +265,8 @@ h6,
 @import "./pages/Blog/Blog.scss";
 @import "./pages/OurStore/OurStore.scss";
 @import "./pages/ProductSingle/ProductSingle.scss";
-//@import "./pages/Articles/Articles.scss";
 @import "./pages/ArticleSingle/ArticleSingle.scss";
 @import "./pages/ContactUs/ContactUs.scss";
 @import "./pages/ContactUs/Faq/Faq.scss";
 @import "./pages/NotFoundPage/NotFoundPage.scss";
+@import "./pages/About/About.scss";
