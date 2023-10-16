@@ -1,4 +1,4 @@
-.testimonial {
+.testimonials {
   &__wrap {
     display: grid;
     grid-template-columns: 0.7fr 1.2fr;
@@ -24,6 +24,9 @@
 
 .overall-ratings {
   &__rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 5px;
 
     img {
@@ -37,33 +40,37 @@
   }
 }
 
-.testimonial-list {
-  align-items: center;
-  @media (max-width: 1279px) {
-    flex-direction: column;
+.testimonials-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
   }
 
-  &,
-  &__column {
-    display: flex;
-    gap: 15px;
-  }
-
-  &__column {
-    flex: 0 0 50%;
-    flex-direction: column;
-    @media (max-width: 1279px) {
-      width: 100%;
-      flex-direction: row;
-      justify-content: center;
+  &__item {
+    &:nth-child(2) {
+      align-self: center;
+      grid-row: span 2;
+      @media (max-width: 1279px) {
+        grid-row: span 1;
+      }
     }
-    @media (max-width: 991px) {
-      flex-direction: column;
+    &:last-child {
+      @media (max-width: 1279px) {
+        grid-column: span 2;
+        justify-self: center;
+      }
+      @media (max-width: 991px) {
+        grid-column: span 1;
+        justify-self: stretch;
+      }
     }
   }
 }
 
-.testimonial-item {
+.testimonial {
   background-color: var(--blue);
   padding: 35px;
 

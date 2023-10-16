@@ -5,7 +5,7 @@ import { Partners } from "../../components/Partners/Partners";
 import { Order } from "./Order/Order";
 import { Learn } from "./Learn/Learn";
 import { Chapters } from "./Chapters/Chapters";
-import { Testimonial } from "./Testimonial/Testimonial";
+import { Testimonials } from "./Testimonials/Testimonials";
 import { HomeBlog } from "./HomeBlog/HomeBlog";
 import { Subscription } from "../../components/Subscription/Subscription";
 
@@ -19,7 +19,7 @@ function Home() {
       <Order />
       <Learn />
       <Chapters />
-      <Testimonial />
+      <Testimonials />
       <HomeBlog />
       <Subscription />
     </>
