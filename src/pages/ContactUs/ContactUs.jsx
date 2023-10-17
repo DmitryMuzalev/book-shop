@@ -1,5 +1,7 @@
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
-import { Faq } from "./Faq/Faq";
+import { Faq } from "./components/Faq/Faq";
+import { contacts } from "../../data/contacts";
+import { ContactForm } from "./components/ContactForm/ContactForm";
 
 function ContactUs() {
   return (
@@ -16,11 +18,12 @@ function ContactUs() {
           </SectionTitle>
         </div>
       </section>
+
       <section className="contact-us section-wrap">
         <div className="container">
           <div className="contact-us__wrap">
             <div className="contact-us__content-wrap">
-              <SectionTitle isLeft={true}>
+              <SectionTitle classes="section-title_left">
                 <h2>Keep in touch</h2>
                 <p>
                   We believe that bookstores are essential to a healthy culture.
@@ -37,7 +40,7 @@ function ContactUs() {
                     <h3 className="keep-touch-detail-item__title title_big">
                       visit us:
                     </h3>
-                    <p>24A Kingston St, Las Vegas NC 28202, USA.</p>
+                    <a href={contacts.address.url}>{contacts.address.label}</a>
                   </div>
                 </div>
                 <div className="keep-touch-detail-item">
@@ -48,7 +51,7 @@ function ContactUs() {
                     <h3 className="keep-touch-detail-item__title title_big">
                       drop us:
                     </h3>
-                    <a href="mailto:support@pages.com">support@pages.com</a>
+                    <a href={contacts.mail.url}>{contacts.mail.label}</a>
                   </div>
                 </div>
                 <div className="keep-touch-detail-item">
@@ -59,73 +62,12 @@ function ContactUs() {
                     <h3 className="keep-touch-detail-item__title title_big">
                       call us:
                     </h3>
-                    <a href="tel:+221234567900">(+22) 123 - 4567 - 900</a>
+                    <a href={contacts.phone.url}>{contacts.phone.label}</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="contact-us__form">
-              <form action="" className="contact-form">
-                <div className="contact-form__row">
-                  <div className="contact-form-field">
-                    <div className="contact-form-field__icon">
-                      <img src="./images/icons/user.svg" alt="user" />
-                    </div>
-                    <input
-                      type="text"
-                      className="contact-form-field__item input-field"
-                      placeholder="Name"
-                    />
-                  </div>
-                  <div className="contact-form-field">
-                    <div className="contact-form-field__icon">
-                      <img src="./images/icons/mail.svg" alt="mail" />
-                    </div>
-                    <input
-                      type="email"
-                      className="contact-form-field__item input-field"
-                      placeholder="Email"
-                    />
-                  </div>
-                </div>
-                <div className="contact-form-field">
-                  <div className="contact-form-field__icon">
-                    <img src="./images/icons/phone.svg" alt="phone" />
-                  </div>
-                  <input
-                    type="tel"
-                    className="contact-form-field__item input-field"
-                    placeholder="Phone"
-                  />
-                </div>
-                <div className="contact-form-field">
-                  <div className="contact-form-field__icon textarea-field-icon">
-                    <img src="./images/icons/edit.svg" alt="edit" />
-                  </div>
-                  <textarea
-                    className="contact-form-field__item input-field textarea-field"
-                    placeholder="Message"
-                  />
-                </div>
-                <label className="checkbox-field">
-                  <input
-                    type="checkbox"
-                    name="subscription"
-                    className="checkbox-field__checkbox"
-                  />
-                  <div className="checkbox-field__custom-checkbox"></div>
-                  <span>
-                    Keep me up to date with news and offers from time to time by
-                    email
-                  </span>
-                </label>
-                <input
-                  type="submit"
-                  className="btn contact-form__btn"
-                  value="send a message"
-                />
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>

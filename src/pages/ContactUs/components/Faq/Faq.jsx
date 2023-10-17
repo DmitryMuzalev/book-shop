@@ -1,6 +1,6 @@
-import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
-import { Accordion } from "../../../components/Accordion/Accordion";
-import { faqList } from "../../../data/faqList";
+import { SectionTitle } from "../../../../components/SectionTitle/SectionTitle";
+import { Accordion } from "../../../../components/Accordion/Accordion";
+import { faqList } from "../../../../data/faqList";
 
 function Faq() {
   return (
