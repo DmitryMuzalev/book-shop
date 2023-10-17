@@ -39,7 +39,8 @@
   }
 }
 
-.author-info-details-item {
+.author-info-details-item,
+.author-info-social-network {
   display: flex;
   gap: 15px;
   justify-content: space-between;
@@ -54,6 +55,7 @@
   }
 
   &__info {
+    text-transform: capitalize;
   }
 }
 
@@ -76,5 +78,8 @@
 
   &__btn {
     margin-top: 30px;
+    &:hover {
+      color: inherit;
+    }
   }
 }

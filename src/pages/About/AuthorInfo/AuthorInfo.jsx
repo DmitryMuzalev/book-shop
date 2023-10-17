@@ -1,5 +1,40 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
+import { Button } from "../../../components/Button/Button";
+import { author } from "../../../data/author";
+
+function AuthorInfoSocialNetwork() {
+  return (
+    <div className="author-info-social-network">
+      <h2 className="author-info-details-item__title title title_big">
+        Follow Me On:
+      </h2>
+      <div className="author-info-social-links">
+        {author.socialNetwork.map((item) => (
+          <a
+            href={item.url}
+            className="author-info-social-links__item"
+            key={item.id}
+          >
+            {item.icon}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function AuthorInfoDetails() {
+  const info = author.info;
+  const parameters = Object.keys(info);
+  return parameters.map((parameter) => (
+    <div className="author-info-details-item">
+      <h2 className="author-info-details-item__title title title_big">
+        {parameter}:
+      </h2>
+      <p className="author-info-details-item__info">{info[parameter]}</p>
+    </div>
+  ));
+}
 
 function AuthorInfo() {
   return (
@@ -14,60 +49,15 @@ function AuthorInfo() {
           </div>
           <div className="author-info__content-wrap">
             <div className="author-info-details">
-              <div className="author-info-details-item">
-                <h2 className="author-info-details-item__title title title_big">
-                  Country:
-                </h2>
-                <p className="author-info-details-item__info">United Kingdom</p>
-              </div>
-              <div className="author-info-details-item">
-                <h2 className="author-info-details-item__title title title_big">
-                  Language:
-                </h2>
-                <p className="author-info-details-item__info">English</p>
-              </div>
-              <div className="author-info-details-item">
-                <h2 className="author-info-details-item__title title title_big">
-                  Genre:
-                </h2>
-                <p className="author-info-details-item__info">Historical</p>
-              </div>
-              <div className="author-info-details-item">
-                <h2 className="author-info-details-item__title title title_big">
-                  First Publication:
-                </h2>
-                <p className="author-info-details-item__info">1991</p>
-              </div>
-              <div className="author-info-details-item">
-                <h2 className="author-info-details-item__title title title_big">
-                  Follow Me On:
-                </h2>
-                <div className="author-info-social-links">
-                  <a href="!#" className="author-info-social-links__item">
-                    <FaFacebookF />
-                  </a>
-                  <a href="!#" className="author-info-social-links__item">
-                    <FaTwitter />
-                  </a>
-                  <a href="!#" className="author-info-social-links__item">
-                    <FaLinkedinIn />
-                  </a>
-                </div>
-              </div>
+              <AuthorInfoDetails />
+              <AuthorInfoSocialNetwork />
             </div>
             <div className="author-info-bio">
               <SectionTitle isLeft={true}>
-                <h2>About Dr. John Abraham</h2>
-                <p>
-                  An author, a website or magazine, have a an organization that
-                  wants to recommend books, or even just a book-lover with an
-                  Instagram feed, you can sign up to be an affiliate, start your
-                  own shop, and be rewarded for your advocacy of books.
-                </p>
+                <h2>{author.name}</h2>
+                <p>{author.bio}</p>
               </SectionTitle>
-              <button type="button" className="btn author-info-bio__btn">
-                contact now
-              </button>
+              <Button classes="author-info-bio__btn">contact now</Button>
             </div>
           </div>
         </div>

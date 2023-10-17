@@ -16,7 +16,7 @@ function Subscription() {
     <section className="subscription section-wrap">
       <div className="container">
         <div className="subscription__wrap">
-          <SectionTitle isBlue={true}>
+          <SectionTitle classes="section-title_b">
             <h2>Get The Best Updates</h2>
             <p style={{ color: "var(--blue)", textAlign: "center" }}>
               Subscribe with your mail id to know the current update in book
