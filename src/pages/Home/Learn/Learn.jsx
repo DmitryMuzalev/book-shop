@@ -1,7 +1,6 @@
+import { useSelector } from "react-redux";
 import { Frame } from "../../../components/Frame/Frame";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
-
-import { learnSteps } from "../../../data/learnSteps";
 
 function LearnStep({ number, description }) {
   return (
@@ -15,6 +14,7 @@ function LearnStep({ number, description }) {
 }
 
 function Learn() {
+  const { learnSteps } = useSelector((state) => state.learn);
   return (
     <section className="learn section-wrap">
       <div className="container">

@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { socialNetwork } from "../../data/socialNetwork";
+import { useSelector } from "react-redux";
 
 function SocialLinksItem({ icon, url }) {
   return (
@@ -11,9 +11,12 @@ function SocialLinksItem({ icon, url }) {
 
 function SocialLinks({ classes = null }) {
   const socialLinksStyles = clsx("social-links", classes);
+
+  const { socialNetworks } = useSelector((state) => state.contacts);
+
   return (
     <div className={socialLinksStyles}>
-      {socialNetwork.map((link) => (
+      {socialNetworks.map((link) => (
         <SocialLinksItem key={link.id} {...link} />
       ))}
     </div>

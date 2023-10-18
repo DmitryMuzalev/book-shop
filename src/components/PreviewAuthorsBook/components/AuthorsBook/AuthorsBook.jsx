@@ -1,10 +1,11 @@
+import { useSelector } from "react-redux";
 import { Button } from "../../../Button/Button";
 
-function AuthorsBookItem({ image, title, price, annotation, format }) {
+function AuthorsBookItem({ cover, title, price, annotation, format }) {
   return (
     <div className="authors-book-item">
       <a href="#!" className="authors-book-item__image">
-        <img src={image} alt={title} />
+        <img src={cover} alt={title} />
       </a>
       <div className="authors-book-item__listing">
         <div className="authors-book-item__detail">
@@ -28,7 +29,8 @@ function AuthorsBookItem({ image, title, price, annotation, format }) {
   );
 }
 
-function AuthorsBook({ books }) {
+function AuthorsBook() {
+  const { books } = useSelector((state) => state.author);
   return (
     <div className="authors-book">
       <ul className="authors-book__content">

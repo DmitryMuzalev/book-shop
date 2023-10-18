@@ -1,7 +1,15 @@
-import { contacts } from "../../../../data/contacts";
+import { useSelector } from "react-redux";
 
 function FooterContact() {
-  const contactsKeys = Object.keys(contacts);
+  const { address, mail, phone } = useSelector((state) => state.contacts);
+
+  const contactUs = {
+    address,
+    mail,
+    phone,
+  };
+
+  const contactsKeys = Object.keys(contactUs);
 
   return (
     <div className="footer-contact">
@@ -11,7 +19,7 @@ function FooterContact() {
           <div className="footer-contact-item" key={i}>
             <div className="footer-contact-item__label title">{item} :</div>
             <div className="footer-contact-item__content">
-              <a href={contacts[item].url}>{contacts[item].label}</a>
+              <a href={contactUs[item].url}>{contactUs[item].label}</a>
             </div>
           </div>
         ))}

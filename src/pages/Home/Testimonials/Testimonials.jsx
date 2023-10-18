@@ -1,6 +1,5 @@
+import { useSelector } from "react-redux";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
-
-import { testimonials } from "../../../data/testimonials";
 
 function TestimonialsItem({ avatar, author, title, message, rating }) {
   return (
@@ -27,12 +26,14 @@ function TestimonialsItem({ avatar, author, title, message, rating }) {
 }
 
 function Testimonials() {
+  const { testimonialsList } = useSelector((state) => state.testimonial);
+
   return (
     <section className="testimonials section-wrap">
       <div className="container">
         <div className="testimonials__wrap">
           <div className="testimonials__content-wrap">
-            <SectionTitle isLeft={true}>
+            <SectionTitle classes="section-title_left">
               <h2>words from our readers</h2>
               <p>
                 We believe that bookstores are essential to a healthy culture.
@@ -53,7 +54,7 @@ function Testimonials() {
           </div>
 
           <div className="testimonials__review-wrap testimonials-list">
-            {testimonials.map((testimonial) => (
+            {testimonialsList.map((testimonial) => (
               <TestimonialsItem {...testimonial} key={testimonial.id} />
             ))}
           </div>

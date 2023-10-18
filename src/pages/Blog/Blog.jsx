@@ -1,8 +1,10 @@
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
-import { articles } from "../../data/articles";
 import { Articles } from "../../components/Articles/Articles";
+import { useSelector } from "react-redux";
 
 function Blog() {
+  const { articlesList } = useSelector((state) => state.articles);
+
   return (
     <>
       <section className="page-description">
@@ -18,7 +20,7 @@ function Blog() {
 
       <section className="blog section-wrap">
         <div className="container">
-          <Articles articles={articles} withFilter={true} />
+          <Articles articles={articlesList} withFilter={true} />
         </div>
       </section>
     </>

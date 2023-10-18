@@ -1,8 +1,9 @@
 import { SectionTitle } from "../../../../components/SectionTitle/SectionTitle";
 import { Accordion } from "../../../../components/Accordion/Accordion";
-import { faqList } from "../../../../data/faqList";
+import { useSelector } from "react-redux";
 
 function Faq() {
+  const { faqList } = useSelector((state) => state.faq);
   return (
     <section className="faq section-wrap">
       <div className="container">

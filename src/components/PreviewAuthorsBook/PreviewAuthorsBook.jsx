@@ -1,7 +1,5 @@
 import { clsx } from "clsx";
 
-import { books } from "../../data/books";
-
 import { AuthorsBook } from "./components/AuthorsBook/AuthorsBook";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 
@@ -19,7 +17,7 @@ function PreviewAuthorsBook({ title, classes }) {
           <SectionTitle>
             <h2>{title}</h2>
           </SectionTitle>
-          <AuthorsBook books={books} />
+          <AuthorsBook />
         </div>
       </div>
     </section>

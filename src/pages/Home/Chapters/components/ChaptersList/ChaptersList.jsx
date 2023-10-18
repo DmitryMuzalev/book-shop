@@ -1,4 +1,4 @@
-import { chapters } from "../../../../../data/chapters";
+import { useSelector } from "react-redux";
 
 function ChapterItem({ title, description, details }) {
   return (
@@ -32,6 +32,7 @@ function ChapterItemDetails({ details }) {
 }
 
 function ChaptersList() {
+  const { chapters } = useSelector((state) => state.author.books[0]);
   return (
     <div className="chapters-list">
       {chapters.map((chapter) => (

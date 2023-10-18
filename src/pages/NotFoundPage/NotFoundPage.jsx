@@ -1,3 +1,5 @@
+import { Button } from "../../components/Button/Button";
+
 function NotFoundPage() {
   return (
     <section className="not-found-page">
@@ -9,9 +11,7 @@ function NotFoundPage() {
           some other page, or return to the website's homepage to find what
           you're looking for.
         </p>
-        <a href="#!" className="btn not-found-page__btn">
-          back to home
-        </a>
+        <Button classes="not-found-page__btn">back to home</Button>
       </div>
     </section>
   );

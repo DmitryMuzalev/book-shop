@@ -1,21 +1,23 @@
+import { useSelector } from "react-redux";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
-import { author } from "../../../data/author";
 
-function AchievementsItem({ id, title, description }) {
+function AwardsItem({ id, title, description }) {
   return (
-    <div className="achievements-item">
-      <div className="achievements-item__icon-wrap">
-        <h3 className="achievements-item__number">{id < 10 ? `0${id}` : id}</h3>
+    <div className="awards-item">
+      <div className="awards-item__icon-wrap">
+        <h3 className="awards-item__number">{id < 10 ? `0${id}` : id}</h3>
       </div>
-      <div className="achievements-item__content-wrap">
-        <h3 className="achievements-item__title title_big">{title}</h3>
-        <p className="achievements-item__content">{description}</p>
+      <div className="awards-item__content-wrap">
+        <h3 className="awards-item__title title_big">{title}</h3>
+        <p className="awards-item__content">{description}</p>
       </div>
     </div>
   );
 }
 
 function MyStory() {
+  const { aboutMe, awards } = useSelector((state) => state.author);
+
   return (
     <section className="my-story section-wrap">
       <div className="container">
@@ -23,11 +25,11 @@ function MyStory() {
           <div className="my-story__content-wrap">
             <SectionTitle isLeft={true}>
               <h2>My story</h2>
-              <p>{author.aboutMe}</p>
+              <p>{aboutMe}</p>
             </SectionTitle>
-            <div className="achievements">
-              {author.achievements.map((achievement) => (
-                <AchievementsItem {...achievement} key={achievement.id} />
+            <div className="awards">
+              {awards.map((achievement) => (
+                <AwardsItem {...achievement} key={achievement.id} />
               ))}
             </div>
           </div>

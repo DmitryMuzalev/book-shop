@@ -1,5 +1,5 @@
+import { useSelector } from "react-redux";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
-import { partners } from "../../data/partners";
 
 function PartnersItem({ name, logo, description }) {
   return (
@@ -16,6 +16,8 @@ function PartnersItem({ name, logo, description }) {
 }
 
 function Partners() {
+  const { partnersList } = useSelector((state) => state.partners);
+
   return (
     <section className="partners section-wrap">
       <div className="container">
@@ -24,7 +26,7 @@ function Partners() {
             <h2>trusted by the best</h2>
           </SectionTitle>
           <ul className="partners__list">
-            {partners.map((partner) => (
+            {partnersList.map((partner) => (
               <PartnersItem {...partner} key={partner.id} />
             ))}
           </ul>

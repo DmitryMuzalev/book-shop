@@ -1,9 +1,11 @@
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
 import { Faq } from "./components/Faq/Faq";
-import { contacts } from "../../data/contacts";
 import { ContactForm } from "./components/ContactForm/ContactForm";
+import { useSelector } from "react-redux";
 
 function ContactUs() {
+  const { address, mail, phone } = useSelector((state) => state.contacts);
+
   return (
     <>
       <section className="page-description">
@@ -40,7 +42,7 @@ function ContactUs() {
                     <h3 className="keep-touch-detail-item__title title_big">
                       visit us:
                     </h3>
-                    <a href={contacts.address.url}>{contacts.address.label}</a>
+                    <a href={address.url}>{address.label}</a>
                   </div>
                 </div>
                 <div className="keep-touch-detail-item">
@@ -51,7 +53,7 @@ function ContactUs() {
                     <h3 className="keep-touch-detail-item__title title_big">
                       drop us:
                     </h3>
-                    <a href={contacts.mail.url}>{contacts.mail.label}</a>
+                    <a href={mail.url}>{mail.label}</a>
                   </div>
                 </div>
                 <div className="keep-touch-detail-item">
@@ -62,7 +64,7 @@ function ContactUs() {
                     <h3 className="keep-touch-detail-item__title title_big">
                       call us:
                     </h3>
-                    <a href={contacts.phone.url}>{contacts.phone.label}</a>
+                    <a href={phone.url}>{phone.label}</a>
                   </div>
                 </div>
               </div>

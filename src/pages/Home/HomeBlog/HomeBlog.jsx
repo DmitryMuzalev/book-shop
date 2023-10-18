@@ -1,9 +1,9 @@
+import { useSelector } from "react-redux";
 import { Articles } from "../../../components/Articles/Articles";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
-import { articles } from "../../../data/articles";
 
 function HomeBlog() {
-  const articlesList = articles.slice(0, 3);
+  const { articlesList } = useSelector((state) => state.articles);
 
   return (
     <section className="home-blog section-wrap">
@@ -12,7 +12,7 @@ function HomeBlog() {
           <SectionTitle>
             <h2>Articles & Resources</h2>
           </SectionTitle>
-          <Articles articles={articlesList} />
+          <Articles articles={articlesList.slice(0, 3)} />
         </div>
       </div>
     </section>

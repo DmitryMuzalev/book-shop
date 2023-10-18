@@ -1,4 +1,5 @@
-import { dateFormat } from "../../../../data/articles";
+import { dateFormat } from "../../../../functions";
+
 function ArticlesItem({ banner, title, description, date }) {
   return (
     <div className="article-item">

@@ -3,22 +3,12 @@ import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 import { BusinessCard } from "./components/BusinessCard/BusinessCard";
 import { AboutAuthorDetails } from "./components/AboutAuthorDetails/AboutAuthorDetails";
+import { useSelector } from "react-redux";
 
 function AboutAuthor() {
-  const authorData = {
-    name: "John Abraham , Ph.d",
-    avatar: "./images/photos/avatar_about_author.jpg",
-    contacts: {
-      email: "johnabraham@gmail.com",
-      phone: "(+2) 123 545 9000",
-      qrCode: "./images/other/qr_code.svg",
-    },
-    details: {
-      quantityBooks: 2,
-      rating: 4.5,
-      awards: 4,
-    },
-  };
+  const { name, photos, contacts, aboutMe, details } = useSelector(
+    (state) => state.author
+  );
 
   return (
     <section className="about-author section-wrap">
@@ -26,24 +16,19 @@ function AboutAuthor() {
         <div className="about-author__wrap section-grid">
           <Frame
             classes="about-author__image-wrap"
-            image={authorData.avatar}
-            label={authorData.name}
+            image={photos[0]}
+            label={name}
           />
           <div className="about-author__content-wrap">
             <SectionTitle classes="section-title_left">
               <h2>About the Author</h2>
-              <p>
-                We believe that bookstores are essential to a healthy culture.
-                They’re where authors can connect with readers, where we
-                discover new writers, where children get hooked on the thrill of
-                reading that can last a lifetime.
-              </p>
+              <p>{aboutMe}</p>
             </SectionTitle>
-            <AboutAuthorDetails {...authorData.details} />
+            <AboutAuthorDetails {...details} />
             <BusinessCard
               classes="about-author__business-card"
-              name={authorData.name}
-              {...authorData.contacts}
+              name={name}
+              {...contacts}
             />
           </div>
         </div>

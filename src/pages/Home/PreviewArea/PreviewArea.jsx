@@ -1,15 +1,16 @@
+import { useSelector } from "react-redux";
 import { Button } from "../../../components/Button/Button";
 import { PreviewBookDetails } from "./components/PreviewBookDetails/PreviewBookDetails";
 
 function PreviewArea() {
-  const previewBook = {
-    title: "The dark light",
-    cover: "./images/books/book_2.svg",
-    parameters: {
-      pages: "250pages",
-      length: "10 hours",
-      rating: "4.5/5 (305 ratings)",
-    },
+  const { title, cover, details } = useSelector(
+    (state) => state.author.books[0]
+  );
+
+  const parameters = {
+    pages: `${details.paperback} pages`,
+    length: `${details.length} hours`,
+    rating: `${details.rating}/5 (${details.ratingCounter} ratings)`,
   };
 
   return (
@@ -38,10 +39,10 @@ function PreviewArea() {
               <Button classes="btn_download">read free demo</Button>
             </div>
 
-            <PreviewBookDetails details={previewBook.parameters} />
+            <PreviewBookDetails details={parameters} />
           </div>
           <div className="preview-area__image-wrap">
-            <img src={previewBook.cover} alt={previewBook.title} />
+            <img src={cover} alt={title} />
           </div>
         </div>
       </div>
