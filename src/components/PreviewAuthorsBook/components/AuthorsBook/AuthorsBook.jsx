@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Button } from "../../../Button/Button";
 
-function AuthorsBookItem({ cover, title, price, annotation, format }) {
+function AuthorsBookItem({ cover, title, price, annotationMin, format }) {
   return (
     <div className="authors-book-item">
       <a href="#!" className="authors-book-item__image">
@@ -15,7 +15,7 @@ function AuthorsBookItem({ cover, title, price, annotation, format }) {
           <div className="authors-book-item__price">{`$ ${price} USD`}</div>
         </div>
         <div className="authors-book-item__content">
-          <p className="authors-book-item__annotation">{annotation}</p>
+          <p className="authors-book-item__annotation">{annotationMin}</p>
           <div className="authors-book-item__format">
             <span className="marker"></span>
             <h3 className="title title_big">{format}</h3>
@@ -30,11 +30,16 @@ function AuthorsBookItem({ cover, title, price, annotation, format }) {
 }
 
 function AuthorsBook() {
-  const { books } = useSelector((state) => state.author);
+  const { booksList } = useSelector((state) => state.books);
+
+  const printedBooks = booksList.filter(
+    (book) => book.format === "printed book"
+  );
+
   return (
     <div className="authors-book">
       <ul className="authors-book__content">
-        {books.map((book) => {
+        {printedBooks.map((book) => {
           return (
             <li key={book.id}>
               <AuthorsBookItem {...book} />

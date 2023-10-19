@@ -32,11 +32,12 @@ function ChapterItemDetails({ details }) {
 }
 
 function ChaptersList() {
-  const { chapters } = useSelector((state) => state.author.books[0]);
+  const { booksList } = useSelector((state) => state.books);
+  const primaryBook = booksList.find((book) => book.format === "printed book");
   return (
     <div className="chapters-list">
-      {chapters.map((chapter) => (
-        <ChapterItem {...chapter} key={chapter.id} />
+      {primaryBook.chapters.map((chapter) => (
+        <ChapterItem key={chapter.number} {...chapter} />
       ))}
     </div>
   );

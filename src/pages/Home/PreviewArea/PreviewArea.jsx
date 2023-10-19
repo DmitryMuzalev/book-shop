@@ -3,14 +3,20 @@ import { Button } from "../../../components/Button/Button";
 import { PreviewBookDetails } from "./components/PreviewBookDetails/PreviewBookDetails";
 
 function PreviewArea() {
-  const { title, cover, details } = useSelector(
-    (state) => state.author.books[0]
+  const { id } = useSelector((state) => state.author);
+
+  const { booksList } = useSelector((state) => state.books);
+
+  const primaryBook = booksList.find(
+    (book) => id === book.authorID && book.format === "printed book"
   );
 
+  const { paperback, length, rating, ratingCounter } = primaryBook.details;
+
   const parameters = {
-    pages: `${details.paperback} pages`,
-    length: `${details.length} hours`,
-    rating: `${details.rating}/5 (${details.ratingCounter} ratings)`,
+    pages: `${paperback} pages`,
+    length: `${length} hours`,
+    rating: `${rating}/5 (${ratingCounter} ratings)`,
   };
 
   return (
@@ -42,7 +48,7 @@ function PreviewArea() {
             <PreviewBookDetails details={parameters} />
           </div>
           <div className="preview-area__image-wrap">
-            <img src={cover} alt={title} />
+            <img src={primaryBook.cover} alt={primaryBook.title} />
           </div>
         </div>
       </div>

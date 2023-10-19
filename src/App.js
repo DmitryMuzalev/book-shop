@@ -5,25 +5,25 @@ import { Header } from "./components/Header/Header";
 //import { About } from "./pages/About/About";
 //import { ContactUs } from "./pages/ContactUs/ContactUs";
 //import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
+//import { OurStore } from "./pages/OurStore/OurStore";
+//import { Blog } from "./pages/Blog/Blog";
 
-//!import { OurStore } from "./pages/OurStore/OurStore";
 //!import { ArticleSingle } from './pages/ArticleSingle/ArticleSingle';
 //!import { ProductSingle } from "./pages/ProductSingle/ProductSingle";
-
-import { Blog } from "./pages/Blog/Blog";
 
 function App() {
   return (
     <>
       <Header />
-      {/* <Home /> */}
+      {/*    <Home /> */}
       {/* <About /> */}
       {/* <Blog /> */}
 
-      {/* <ContactUs /> */}
+      {/*    <ContactUs /> */}
       {/* <NotFoundPage /> */}
 
       {/* <OurStore /> */}
+
       {/* <ProductSingle /> */}
       {/* <ArticleSingle /> */}
       <Footer />

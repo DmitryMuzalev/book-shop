@@ -7,6 +7,7 @@ import articlesReducer from "./slices/articlesSlice";
 import contactsReducer from "./slices/contactsSlice";
 import partnersReducer from "./slices/partnersSlice";
 import testimonialReducer from "./slices/testimonialsSlice";
+import booksReducer from "./slices/booksSlice";
 
 export default configureStore({
   reducer: {
@@ -17,5 +18,6 @@ export default configureStore({
     contacts: contactsReducer,
     partners: partnersReducer,
     testimonial: testimonialReducer,
+    books: booksReducer,
   },
 });
