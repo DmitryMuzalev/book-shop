@@ -8,24 +8,24 @@ import { Header } from "./components/Header/Header";
 //import { OurStore } from "./pages/OurStore/OurStore";
 //import { Blog } from "./pages/Blog/Blog";
 
-//!import { ArticleSingle } from './pages/ArticleSingle/ArticleSingle';
+import { ArticleSingle } from "./pages/ArticleSingle/ArticleSingle";
 //!import { ProductSingle } from "./pages/ProductSingle/ProductSingle";
 
 function App() {
   return (
     <>
       <Header />
-      {/*    <Home /> */}
+      {/* <Home /> */}
       {/* <About /> */}
       {/* <Blog /> */}
 
-      {/*    <ContactUs /> */}
+      {/* <ContactUs /> */}
       {/* <NotFoundPage /> */}
 
       {/* <OurStore /> */}
 
       {/* <ProductSingle /> */}
-      {/* <ArticleSingle /> */}
+      <ArticleSingle />
       <Footer />
     </>
   );

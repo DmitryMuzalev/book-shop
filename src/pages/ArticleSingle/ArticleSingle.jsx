@@ -1,6 +1,14 @@
+import { useSelector } from "react-redux";
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
+import { dateFormat } from "../../functions";
 
 function ArticleSingle() {
+  const { articlesList } = useSelector((state) => state.articles);
+
+  const selectedArticle = articlesList[0];
+
+  const { title, banner, date, category } = selectedArticle;
+
   return (
     <>
       <section className="page-description">
@@ -14,7 +22,7 @@ function ArticleSingle() {
                 margin: "0 auto",
               }}
             >
-              Many variations of pass majority have suffered
+              {title}
             </h1>
           </SectionTitle>
         </div>
@@ -23,14 +31,12 @@ function ArticleSingle() {
         <div className="container">
           <div className="article-single__wrap">
             <div className="article-single__banner">
-              <img src="./images/articles/article_2.jfif" alt="article_2" />
+              <img src={banner} alt={title} />
             </div>
             <div className="article-single__meta-wrap">
-              <div className="article-single__date">October 6, 2021</div>
+              <div className="article-single__date">{dateFormat(date)}</div>
               <div className="article-single__separator">/</div>
-              <div className="article-single__category">
-                Detective & Mystery
-              </div>
+              <div className="article-single__category">{category}</div>
             </div>
             <div className="article-single__content">
               <p>
