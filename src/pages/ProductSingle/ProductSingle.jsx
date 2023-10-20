@@ -1,9 +1,23 @@
+import { useSelector } from "react-redux";
 import { ProductInformation } from "./ProductInformation";
 import { ProductSingleCart } from "./ProductSingleCart";
 import { ProductSingleParameters } from "./ProductSingleParameters";
 import { ShopTrust } from "./ShopTrust";
 
 function ProductSingle() {
+  const { booksList } = useSelector((state) => state.books);
+
+  const {
+    title,
+    cover,
+    price,
+    annotation,
+    details,
+    description,
+    format,
+    "additional info": additionalInfo,
+  } = booksList[0];
+
   return (
     <>
       <section className="product-single section-wrap">
@@ -11,23 +25,24 @@ function ProductSingle() {
           <div className="product-single__wrap">
             <div className="product-single__image-wrap">
               <div className="product-single__image">
-                <img src="../images/books/book_1.svg" alt="book_1" />
+                <img src={cover} alt={title} />
               </div>
             </div>
             <div className="product-single__detail">
-              <h2 className="product-single__title">Atomic One’s - Audio</h2>
-              <div className="product-single__cost">$ 68.97 USD</div>
+              <h2 className="product-single__title">{title}</h2>
+              <div className="product-single__cost">{`$ ${price} USD`}</div>
               <div className="product-single__description paragraph">
-                The book contains ample theoretical content as well as a number
-                of solved questions, it for sure will help aspirants succeed in
-                learning and writing English proficiently.
+                {annotation}
               </div>
 
-              <ProductSingleParameters />
+              <ProductSingleParameters {...details} format={format} />
               <ProductSingleCart />
             </div>
           </div>
-          <ProductInformation />
+          <ProductInformation
+            description={description}
+            additionalInfo={additionalInfo}
+          />
         </div>
       </section>
       <ShopTrust />

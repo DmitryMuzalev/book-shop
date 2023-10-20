@@ -7,9 +7,9 @@ import { Header } from "./components/Header/Header";
 //import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 //import { OurStore } from "./pages/OurStore/OurStore";
 //import { Blog } from "./pages/Blog/Blog";
+//import { ArticleSingle } from "./pages/ArticleSingle/ArticleSingle";
 
-import { ArticleSingle } from "./pages/ArticleSingle/ArticleSingle";
-//!import { ProductSingle } from "./pages/ProductSingle/ProductSingle";
+import { ProductSingle } from "./pages/ProductSingle/ProductSingle";
 
 function App() {
   return (
@@ -24,8 +24,8 @@ function App() {
 
       {/* <OurStore /> */}
 
-      {/* <ProductSingle /> */}
-      <ArticleSingle />
+      <ProductSingle />
+      {/* <ArticleSingle /> */}
       <Footer />
     </>
   );

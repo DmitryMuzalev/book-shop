@@ -72,6 +72,7 @@
   flex-direction: column;
   gap: 15px;
   li {
+    text-transform: capitalize;
     color: var(--grey);
     span {
       color: var(--blue);
