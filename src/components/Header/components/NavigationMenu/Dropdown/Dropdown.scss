@@ -1,6 +1,7 @@
 //_Dropdown toggle:
 .dropdown {
   position: relative;
+
   width: 100%;
 
   &__toggle {
@@ -30,6 +31,7 @@
 //_Dropdown menu:
 .dropdown-menu {
   position: absolute;
+  z-index: 100;
   bottom: 0;
   left: 0;
   transform: translateY(100%);

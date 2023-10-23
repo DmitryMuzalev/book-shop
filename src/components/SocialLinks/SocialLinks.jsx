@@ -3,7 +3,12 @@ import { useSelector } from "react-redux";
 
 function SocialLinksItem({ icon, url }) {
   return (
-    <a href={url} className="social-links__item">
+    <a
+      href={url}
+      className="social-links__item"
+      target="_blank"
+      rel="noreferrer"
+    >
       {icon}
     </a>
   );

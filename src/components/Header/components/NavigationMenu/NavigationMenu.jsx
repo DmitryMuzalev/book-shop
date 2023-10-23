@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Dropdown } from "./Dropdown/Dropdown";
+import { CustomLink } from "../../../CustomLink/CustomLink";
 
 function NavigationMenu() {
   const [isShowDropMenu, setIsShowDropMenu] = useState(false);
@@ -13,19 +14,21 @@ function NavigationMenu() {
       transition={{ duration: 0.3 }}
       className="nav-menu header__nav-menu"
     >
-      <a className="nav-menu__link" href="#!" data-active="true">
+      <CustomLink className="nav-menu__link" to="/" data-active="true">
         Home
-      </a>
-      <a className="nav-menu__link" href="#!">
+      </CustomLink>
+
+      <CustomLink className="nav-menu__link" to="about-author">
         About
-      </a>
+      </CustomLink>
+
       <Dropdown
         isActive={isShowDropMenu}
         onClick={() => setIsShowDropMenu(!isShowDropMenu)}
       />
-      <a className="nav-menu__link" href="#!">
+      <CustomLink className="nav-menu__link" to="/contact-us">
         Contact
-      </a>
+      </CustomLink>
     </motion.nav>
   );
 }

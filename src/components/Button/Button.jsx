@@ -1,11 +1,12 @@
 import { clsx } from "clsx";
+import { CustomLink } from "../CustomLink/CustomLink";
 
-function Button({ classes, children }) {
+function Button({ classes, children, to }) {
   const buttonStyles = clsx("btn", classes);
   return (
-    <a href="#!" className={buttonStyles}>
+    <CustomLink to={to} className={buttonStyles}>
       {children}
-    </a>
+    </CustomLink>
   );
 }
 export { Button };

@@ -1,6 +1,13 @@
 import { FaAngleDown } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { CustomLink } from "../../../../CustomLink/CustomLink";
 
 function Dropdown({ isActive, onClick }) {
+  //!
+  const { booksList } = useSelector((state) => state.books);
+  const firstBook = booksList[0].title.split(" ").join("-");
+  //!
+
   return (
     <div className="dropdown">
       <div
@@ -14,24 +21,28 @@ function Dropdown({ isActive, onClick }) {
         <nav className="dropdown-menu">
           <div className="dropdown-menu__column">
             <div className="dropdown-menu__title title title_small">pages</div>
-            <a href="#!" className="dropdown-menu__link">
+            <CustomLink to="blog" className="dropdown-menu__link">
               articles
-            </a>
-            <a href="#!" className="dropdown-menu__link">
+            </CustomLink>
+            <CustomLink to="our-store" className="dropdown-menu__link">
               our store
-            </a>
-            <a href="#!" className="dropdown-menu__link">
+            </CustomLink>
+            <CustomLink
+              to={`product/${firstBook}`}
+              state={{ id: booksList[0].id }}
+              className="dropdown-menu__link"
+            >
               product single
-            </a>
+            </CustomLink>
           </div>
           <div className="dropdown-menu__column">
             <div className="dropdown-menu__title title">utility pages</div>
             <a href="#!" className="dropdown-menu__link">
               style guide
             </a>
-            <a href="#!" className="dropdown-menu__link">
+            <CustomLink to="*" className="dropdown-menu__link">
               404 Page
-            </a>
+            </CustomLink>
           </div>
         </nav>
       )}

@@ -25,7 +25,9 @@ function Header() {
           <div className="header__nav-menu-wrap">
             {!isTabletOrMobile && <NavigationMenu />}
             <CartBtn classes="header__shopping-cart-btn" />
-            <Button classes="header__btn">order today</Button>
+            <Button classes="header__btn" to="our-store">
+              order today
+            </Button>
             <MenuBtn
               isActive={isShowNavMenu}
               onClick={() => setIsNavMenu(!isShowNavMenu)}
