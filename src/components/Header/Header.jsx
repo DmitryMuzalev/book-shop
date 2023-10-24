@@ -22,19 +22,22 @@ function Header() {
             <Logo classes="header__logo" />
             <SocialLinks classes={"social-links_full"} />
           </div>
+
           <div className="header__nav-menu-wrap">
             {!isTabletOrMobile && <NavigationMenu />}
             <CartBtn classes="header__shopping-cart-btn" />
             <Button classes="header__btn" to="our-store">
               order today
             </Button>
+
             <MenuBtn
               isActive={isShowNavMenu}
               onClick={() => setIsNavMenu(!isShowNavMenu)}
             />
           </div>
+
           <AnimatePresence>
-            {/*   {isTabletOrMobile && isShowNavMenu && <NavigationMenu />} */}
+            {isTabletOrMobile && isShowNavMenu && <NavigationMenu />}
           </AnimatePresence>
         </div>
       </div>

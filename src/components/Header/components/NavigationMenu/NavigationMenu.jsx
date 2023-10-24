@@ -25,6 +25,7 @@ function NavigationMenu() {
       <Dropdown
         isActive={isShowDropMenu}
         onClick={() => setIsShowDropMenu(!isShowDropMenu)}
+        setIsShow={setIsShowDropMenu}
       />
       <CustomLink className="nav-menu__link" to="contact-us">
         Contact

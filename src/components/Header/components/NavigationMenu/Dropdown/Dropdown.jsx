@@ -1,12 +1,18 @@
 import { FaAngleDown } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { CustomLink } from "../../../../CustomLink/CustomLink";
+import { useRef } from "react";
+import { useClickOutside } from "../../../../../hooks/useClickOutside";
 
-function Dropdown({ isActive, onClick }) {
+function Dropdown({ isActive, onClick, setIsShow }) {
   //!
   const { booksList } = useSelector((state) => state.books);
   const firstBook = booksList[0].title.split(" ").join("-");
   //!
+
+  const refDropdownMenu = useRef(null);
+
+  useClickOutside(refDropdownMenu, () => setIsShow(false));
 
   return (
     <div className="dropdown">
@@ -18,7 +24,7 @@ function Dropdown({ isActive, onClick }) {
         <FaAngleDown />
       </div>
       {isActive && (
-        <nav className="dropdown-menu">
+        <nav className="dropdown-menu" ref={refDropdownMenu}>
           <div className="dropdown-menu__column">
             <div className="dropdown-menu__title title title_small">pages</div>
 
