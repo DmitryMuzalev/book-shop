@@ -62,6 +62,10 @@
     text-transform: capitalize;
     transition: color var(--t-duration);
 
+    &[data-active] {
+      color: var(--yellow);
+    }
+
     &:hover {
       color: var(--yellow);
     }

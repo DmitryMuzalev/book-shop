@@ -28,8 +28,8 @@ function AuthorInfoSocialNetworks() {
 function AuthorInfoDetails() {
   const { info } = useSelector((state) => state.author);
   const parameters = Object.keys(info);
-  return parameters.map((parameter) => (
-    <div className="author-info-details-item">
+  return parameters.map((parameter, index) => (
+    <div className="author-info-details-item" key={index}>
       <h2 className="author-info-details-item__title title title_big">
         {parameter}:
       </h2>

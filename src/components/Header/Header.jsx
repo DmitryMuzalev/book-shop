@@ -34,7 +34,7 @@ function Header() {
             />
           </div>
           <AnimatePresence>
-            {isTabletOrMobile && isShowNavMenu && <NavigationMenu />}
+            {/*   {isTabletOrMobile && isShowNavMenu && <NavigationMenu />} */}
           </AnimatePresence>
         </div>
       </div>

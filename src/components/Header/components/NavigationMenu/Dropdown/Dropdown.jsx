@@ -21,26 +21,48 @@ function Dropdown({ isActive, onClick }) {
         <nav className="dropdown-menu">
           <div className="dropdown-menu__column">
             <div className="dropdown-menu__title title title_small">pages</div>
-            <CustomLink to="blog" className="dropdown-menu__link">
+
+            <CustomLink
+              to="blog"
+              className="dropdown-menu__link"
+              onClick={() => onClick()}
+            >
               articles
             </CustomLink>
-            <CustomLink to="our-store" className="dropdown-menu__link">
+
+            <CustomLink
+              to="our-store"
+              className="dropdown-menu__link"
+              onClick={() => onClick()}
+            >
               our store
             </CustomLink>
+
             <CustomLink
               to={`product/${firstBook}`}
               state={{ id: booksList[0].id }}
               className="dropdown-menu__link"
+              onClick={() => onClick()}
             >
               product single
             </CustomLink>
           </div>
           <div className="dropdown-menu__column">
             <div className="dropdown-menu__title title">utility pages</div>
-            <a href="#!" className="dropdown-menu__link">
+
+            <CustomLink
+              to="404"
+              className="dropdown-menu__link"
+              onClick={() => onClick()}
+            >
               style guide
-            </a>
-            <CustomLink to="*" className="dropdown-menu__link">
+            </CustomLink>
+
+            <CustomLink
+              to="404"
+              className="dropdown-menu__link"
+              onClick={() => onClick()}
+            >
               404 Page
             </CustomLink>
           </div>

@@ -14,7 +14,7 @@ function NavigationMenu() {
       transition={{ duration: 0.3 }}
       className="nav-menu header__nav-menu"
     >
-      <CustomLink className="nav-menu__link" to="/" data-active="true">
+      <CustomLink className="nav-menu__link" to="/">
         Home
       </CustomLink>
 
@@ -26,7 +26,7 @@ function NavigationMenu() {
         isActive={isShowDropMenu}
         onClick={() => setIsShowDropMenu(!isShowDropMenu)}
       />
-      <CustomLink className="nav-menu__link" to="/contact-us">
+      <CustomLink className="nav-menu__link" to="contact-us">
         Contact
       </CustomLink>
     </motion.nav>
