@@ -1,10 +1,19 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { Dropdown } from "./Dropdown/Dropdown";
 import { CustomLink } from "../../../CustomLink/CustomLink";
+import { useDispatch } from "react-redux";
+import {
+  disableDropMenu,
+  disableNavMenu,
+} from "../../../../store/slices/appSlice";
+import { useMediaQuery } from "react-responsive";
 
 function NavigationMenu() {
-  const [isShowDropMenu, setIsShowDropMenu] = useState(false);
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991px)" });
+  const dispatch = useDispatch();
+  const handlerClickLink = () => {
+    isTabletOrMobile ? dispatch(disableNavMenu()) : dispatch(disableDropMenu());
+  };
 
   return (
     <motion.nav
@@ -14,20 +23,25 @@ function NavigationMenu() {
       transition={{ duration: 0.3 }}
       className="nav-menu header__nav-menu"
     >
-      <CustomLink className="nav-menu__link" to="/">
+      <CustomLink className="nav-menu__link" to="/" onClick={handlerClickLink}>
         Home
       </CustomLink>
 
-      <CustomLink className="nav-menu__link" to="about-author">
+      <CustomLink
+        className="nav-menu__link"
+        to="about-author"
+        onClick={handlerClickLink}
+      >
         About
       </CustomLink>
 
-      <Dropdown
-        isActive={isShowDropMenu}
-        onClick={() => setIsShowDropMenu(!isShowDropMenu)}
-        setIsShow={setIsShowDropMenu}
-      />
-      <CustomLink className="nav-menu__link" to="contact-us">
+      <Dropdown />
+
+      <CustomLink
+        className="nav-menu__link"
+        to="contact-us"
+        onClick={handlerClickLink}
+      >
         Contact
       </CustomLink>
     </motion.nav>

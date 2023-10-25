@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { AnimatePresence } from "framer-motion";
 
@@ -9,10 +8,11 @@ import { CartBtn } from "../Cart/Cart";
 
 import { MenuBtn } from "./components/MenuBtn/MenuBtn";
 import { NavigationMenu } from "./components/NavigationMenu/NavigationMenu";
+import { useSelector } from "react-redux";
 
 function Header() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991px)" });
-  const [isShowNavMenu, setIsNavMenu] = useState(false);
+  const { isShowNavMenu } = useSelector((state) => state.app);
 
   return (
     <header className="header">
@@ -29,16 +29,14 @@ function Header() {
             <Button classes="header__btn" to="our-store">
               order today
             </Button>
-
-            <MenuBtn
-              isActive={isShowNavMenu}
-              onClick={() => setIsNavMenu(!isShowNavMenu)}
-            />
           </div>
 
-          <AnimatePresence>
-            {isTabletOrMobile && isShowNavMenu && <NavigationMenu />}
-          </AnimatePresence>
+          <div className="header__nav-menu-mobile">
+            <AnimatePresence>
+              {isTabletOrMobile && isShowNavMenu && <NavigationMenu />}
+            </AnimatePresence>
+            <MenuBtn />
+          </div>
         </div>
       </div>
     </header>

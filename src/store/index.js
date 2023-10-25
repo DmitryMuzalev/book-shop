@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
+import appReducer from "./slices/appSlice";
 import authorReducer from "./slices/authorSlice";
 import faqReducer from "./slices/faqSlice";
 import learnReducer from "./slices/learnSlice";
@@ -12,6 +13,7 @@ import reasonsTrustReducer from "./slices/reasonsTrustSlice";
 
 export default configureStore({
   reducer: {
+    app: appReducer,
     author: authorReducer,
     faq: faqReducer,
     learn: learnReducer,
@@ -22,4 +24,8 @@ export default configureStore({
     books: booksReducer,
     reasonsTrust: reasonsTrustReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });

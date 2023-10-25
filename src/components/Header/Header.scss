@@ -47,6 +47,15 @@
     }
   }
 
+  &__nav-menu-mobile {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+      position: relative;
+      border: 1px solid red;
+    }
+  }
+
   &__shopping-cart-btn {
     margin-top: toEm(5, 17);
     margin-right: 1em;
