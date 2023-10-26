@@ -1,18 +1,15 @@
 import { useMediaQuery } from "react-responsive";
-import { AnimatePresence } from "framer-motion";
 
 import { Logo } from "../Logo/Logo";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
 import { Button } from "../Button/Button";
 import { CartBtn } from "../Cart/Cart";
 
-import { MenuBtn } from "./components/MenuBtn/MenuBtn";
 import { NavigationMenu } from "./components/NavigationMenu/NavigationMenu";
-import { useSelector } from "react-redux";
+import { MobileMenu } from "./components/MobileMenu/MobileMenu";
 
 function Header() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 991px)" });
-  const { isShowNavMenu } = useSelector((state) => state.app);
 
   return (
     <header className="header">
@@ -30,13 +27,7 @@ function Header() {
               order today
             </Button>
           </div>
-
-          <div className="header__nav-menu-mobile">
-            <AnimatePresence>
-              {isTabletOrMobile && isShowNavMenu && <NavigationMenu />}
-            </AnimatePresence>
-            <MenuBtn />
-          </div>
+          <MobileMenu isTabletOrMobile={isTabletOrMobile} />
         </div>
       </div>
     </header>

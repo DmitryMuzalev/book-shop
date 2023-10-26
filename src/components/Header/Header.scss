@@ -48,12 +48,6 @@
   }
 
   &__nav-menu-mobile {
-    display: none;
-    @media (max-width: 991px) {
-      display: block;
-      position: relative;
-      border: 1px solid red;
-    }
   }
 
   &__shopping-cart-btn {
@@ -78,6 +72,14 @@
     &:hover {
       color: var(--white);
     }
+  }
+}
+
+.nav-menu-mobile {
+  display: none;
+  @media (max-width: 991px) {
+    display: block;
+    position: relative;
   }
 }
 

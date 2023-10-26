@@ -1,13 +1,24 @@
 import { useSelector } from "react-redux";
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
 import { dateFormat } from "../../functions";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function ArticleSingle() {
+  const { id } = useParams();
   const { articlesList } = useSelector((state) => state.articles);
 
-  const selectedArticle = articlesList[0];
+  const [currentArticle, setCurrentArticle] = useState(articlesList[0]);
 
-  const { title, banner, date, category } = selectedArticle;
+  useEffect(() => {
+    console.log(id);
+    const art = articlesList.find((article) => article.id == id);
+    setCurrentArticle(art);
+  }, [id]);
+
+  console.log(currentArticle);
+
+  const { title, banner, date, category } = currentArticle;
 
   return (
     <>

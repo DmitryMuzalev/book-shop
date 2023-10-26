@@ -1,20 +1,24 @@
 import { dateFormat } from "../../../../functions";
+import { CustomLink } from "../../../CustomLink/CustomLink";
 
-function ArticlesItem({ banner, title, description, date }) {
+function ArticlesItem({ id, banner, title, description, date }) {
   return (
     <div className="article-item">
-      <a href="#!" className="article-item__banner">
+      <CustomLink to={`/blog/${id}`} className="article-item__banner">
         <img src={banner} alt={title} />
-      </a>
+      </CustomLink>
       <div className="article-item__content-wrap">
-        <a href="#!" className="article-item__title title">
+        <CustomLink to={`/blog/${id}`} className="article-item__title title">
           {title}
-        </a>
+        </CustomLink>
         <p className="article-item__description">{description}</p>
         <div className="article-item__readmore-wrap">
-          <a href="#!" className="article-item__readmore-link">
+          <CustomLink
+            to={`/blog/${id}`}
+            className="article-item__readmore-link"
+          >
             Readmore
-          </a>
+          </CustomLink>
           <p className="article-item__date">{dateFormat(date)}</p>
         </div>
       </div>
