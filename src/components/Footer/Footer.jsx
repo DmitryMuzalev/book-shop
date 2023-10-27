@@ -18,19 +18,19 @@ function Footer() {
           <FooterWidget
             title="explore"
             linksPages={[
-              { label: "home", url: "#!" },
-              { label: "about", url: "#!" },
-              { label: "articles", url: "#!" },
-              { label: "our store", url: "#!" },
-              { label: "contact us", url: "#!" },
+              { label: "home", url: "/" },
+              { label: "about", url: "/about-author" },
+              { label: "articles", url: "/blog" },
+              { label: "our store", url: "/our-store" },
+              { label: "contact us", url: "/contact-us" },
             ]}
           />
 
           <FooterWidget
             title="utility pages"
             linksPages={[
-              { label: "style guide", url: "#!" },
-              { label: "404 not found", url: "#!" },
+              { label: "style guide", url: "/404" },
+              { label: "404 not found", url: "/404" },
             ]}
           />
           <FooterContact />

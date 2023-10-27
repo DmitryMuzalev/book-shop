@@ -20,7 +20,7 @@ const dropMenuState = [
       },
       {
         label: "product single",
-        url: "404",
+        url: "/product/1",
       },
     ],
   },
