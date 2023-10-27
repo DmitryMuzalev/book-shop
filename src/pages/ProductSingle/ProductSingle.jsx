@@ -3,9 +3,19 @@ import { ProductInformation } from "./ProductInformation";
 import { ProductSingleCart } from "./ProductSingleCart";
 import { ProductSingleParameters } from "./ProductSingleParameters";
 import { ShopTrust } from "./ShopTrust";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function ProductSingle() {
   const { booksList } = useSelector((state) => state.books);
+  const { id } = useParams();
+
+  const [currentProduct, setCurrentProduct] = useState(booksList[0]);
+
+  useEffect(() => {
+    const product = booksList.find((p) => p.id === +id);
+    setCurrentProduct(product);
+  }, [id]);
 
   const {
     title,
@@ -16,7 +26,7 @@ function ProductSingle() {
     description,
     format,
     "additional info": additionalInfo,
-  } = booksList[0];
+  } = currentProduct;
 
   return (
     <>

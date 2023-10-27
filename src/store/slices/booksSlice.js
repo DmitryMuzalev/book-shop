@@ -6,7 +6,7 @@ const initialState = {
       id: 1,
       authorID: 1,
       author: "Dr. John Abraham",
-      cover: "./images/books/book_1.svg",
+      cover: "/images/books/book_1.svg",
       title: "atomic one’s",
       annotationMin:
         "As the book contains theoretical content as well as solved questions.",
@@ -79,7 +79,7 @@ const initialState = {
       id: 2,
       authorID: 1,
       author: "Dr. John Abraham",
-      cover: "./images/books/book_1.svg",
+      cover: "/images/books/book_1.svg",
       title: "atomic one’s - audio",
       annotationMin:
         "As the book contains theoretical content as well as solved questions.",
@@ -152,7 +152,7 @@ const initialState = {
       id: 3,
       authorID: 1,
       author: "Dr. John Abraham",
-      cover: "./images/books/book_1.svg",
+      cover: "/images/books/book_1.svg",
       title: "atomic one’s - CD",
       annotationMin:
         "As the book contains theoretical content as well as solved questions.",
@@ -225,7 +225,7 @@ const initialState = {
       id: 4,
       authorID: 1,
       author: "Dr. John Abraham",
-      cover: "./images/books/book_2.svg",
+      cover: "/images/books/book_2.svg",
       title: "the dark light",
       annotationMin:
         "As the book contains theoretical content as well as solved questions.",
@@ -298,7 +298,7 @@ const initialState = {
       id: 5,
       authorID: 1,
       author: "Dr. John Abraham",
-      cover: "./images/books/book_2.svg",
+      cover: "/images/books/book_2.svg",
       title: "the dark light - audio",
       annotationMin:
         "As the book contains theoretical content as well as solved questions.",
@@ -371,7 +371,7 @@ const initialState = {
       id: 6,
       authorID: 1,
       author: "Dr. John Abraham",
-      cover: "./images/books/book_2.svg",
+      cover: "/images/books/book_2.svg",
       title: "the dark light - CD",
       annotationMin:
         "As the book contains theoretical content as well as solved questions.",
