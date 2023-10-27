@@ -4,7 +4,7 @@ const initialState = {
   articlesList: [
     {
       id: 1,
-      banner: "./images/articles/article_1.jfif",
+      banner: "/images/articles/article_1.jfif",
       title: "Significant reading has more info number",
       description:
         "Override the digital divide with additional clickthroughs from DevOps for real-time schemas.",
@@ -13,7 +13,7 @@ const initialState = {
     },
     {
       id: 2,
-      banner: "./images/articles/article_2.jfif",
+      banner: "/images/articles/article_2.jfif",
       title: "Many variations of pass majority have suffered",
       description:
         "Capitalize on low-hanging fruit to identify a ballpark value-added activity to beta test.",
@@ -22,7 +22,7 @@ const initialState = {
     },
     {
       id: 3,
-      banner: "./images/articles/article_3.jfif",
+      banner: "/images/articles/article_3.jfif",
       title: "Words which don’t look even slightly believable",
       description:
         "Podcasting operational change management inside of workflows to establish a framework.",
@@ -31,7 +31,7 @@ const initialState = {
     },
     {
       id: 4,
-      banner: "./images/articles/article_4.jfif",
+      banner: "/images/articles/article_4.jfif",
       title: "Effective and best blogs for book lovers",
       description:
         "Taking seamless key performance indicators offline to maximize the long book reading tail.",
@@ -40,7 +40,7 @@ const initialState = {
     },
     {
       id: 5,
-      banner: "./images/articles/article_5.jfif",
+      banner: "/images/articles/article_5.jfif",
       title: "Books changed my ideology about life",
       description:
         "Dramatically visualize customer-directed convergence without revolutionary ROI.",
@@ -49,7 +49,7 @@ const initialState = {
     },
     {
       id: 6,
-      banner: "./images/articles/article_6.jfif",
+      banner: "/images/articles/article_6.jfif",
       title: "The principles of writing and the reading",
       description:
         "Dramatically maintain clicks-and-mortar solutions without the main functional solutions.",
@@ -58,7 +58,7 @@ const initialState = {
     },
     {
       id: 7,
-      banner: "./images/articles/article_7.jpg",
+      banner: "/images/articles/article_7.jpg",
       title: "The energy efficiency offers hydrotherapy or swim",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, est laboriosam at officiis ipsum labore.",
@@ -67,7 +67,7 @@ const initialState = {
     },
     {
       id: 8,
-      banner: "./images/articles/article_8.jfif",
+      banner: "/images/articles/article_8.jfif",
       title: "Release of Letraset sheets tools containing  passages",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ad provident magni consequuntur sequi consequatur odio. Fugiat, blanditiis?",
@@ -76,7 +76,7 @@ const initialState = {
     },
     {
       id: 9,
-      banner: "./images/articles/article_9.jfif",
+      banner: "/images/articles/article_9.jfif",
       title: "Lorem ipsum dolor sit.",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nobis ipsa veniam repellendus, maiores voluptas reprehenderit assumenda?",

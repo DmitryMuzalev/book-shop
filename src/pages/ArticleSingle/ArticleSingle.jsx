@@ -11,12 +11,9 @@ function ArticleSingle() {
   const [currentArticle, setCurrentArticle] = useState(articlesList[0]);
 
   useEffect(() => {
-    console.log(id);
-    const art = articlesList.find((article) => article.id == id);
-    setCurrentArticle(art);
+    const article = articlesList.find((a) => a.id === +id);
+    setCurrentArticle(article);
   }, [id]);
-
-  console.log(currentArticle);
 
   const { title, banner, date, category } = currentArticle;
 

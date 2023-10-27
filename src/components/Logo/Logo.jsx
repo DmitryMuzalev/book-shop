@@ -5,7 +5,7 @@ function Logo({ classes = null }) {
   const logoStyle = clsx("logo", classes);
   return (
     <Link to="/" className={logoStyle}>
-      <img src="./images/logo.svg" alt="logo" />
+      <img src="/images/logo.svg" alt="logo" />
     </Link>
   );
 }
