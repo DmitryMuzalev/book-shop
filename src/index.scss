@@ -243,6 +243,20 @@ h6,
   }
 }
 
+.rating,
+.rating-full {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  border: 1px solid var(--yellow);
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.rating-full {
+  background-color: var(--yellow);
+}
+
 //_Importing component styles:
 
 @import "./components/Button/Button.scss";

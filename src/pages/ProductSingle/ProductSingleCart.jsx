@@ -5,12 +5,13 @@ function ProductSingleCart() {
         <input
           type="number"
           defaultValue={1}
+          min={1}
           className="product-single-cart__count"
         />
         <input
           type="submit"
           className="btn product-single-cart__btn"
-          value={'Adding to cart'}
+          value={"Adding to cart"}
         />
       </form>
     </div>

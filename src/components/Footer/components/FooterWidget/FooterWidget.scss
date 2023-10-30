@@ -13,5 +13,8 @@
     background: url("../../../../../public/images/other/footer-link-marker.svg")
       no-repeat;
     background-position: 0 50%;
+    &[data-active] {
+      color: var(--yellow);
+    }
   }
 }

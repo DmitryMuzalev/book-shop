@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
+import Rating from "react-rating";
 
 function TestimonialsItem({ avatar, author, title, message, rating }) {
   return (
@@ -11,7 +12,12 @@ function TestimonialsItem({ avatar, author, title, message, rating }) {
         <div className="testimonial-client-info__content">
           <h3 className="testimonial-client-info__name title_big">{author}</h3>
           <div className="testimonial-client-info__rating">
-            <img src={rating} alt="rating" />
+            <Rating
+              initialRating={rating}
+              readonly
+              emptySymbol={<span className="rating" />}
+              fullSymbol={<span className="rating-full" />}
+            />
           </div>
         </div>
       </div>
@@ -26,7 +32,9 @@ function TestimonialsItem({ avatar, author, title, message, rating }) {
 }
 
 function Testimonials() {
-  const { testimonialsList } = useSelector((state) => state.testimonial);
+  const { testimonialsList, overallRating } = useSelector(
+    (state) => state.testimonial
+  );
 
   return (
     <section className="testimonials section-wrap">
@@ -44,8 +52,23 @@ function Testimonials() {
             </SectionTitle>
             <div className="testimonials__overall-ratings overall-ratings">
               <div className="overall-ratings__rating">
-                <img src="./images/other/rating.svg" alt="rating" />
-                <h3>(4.8/5)</h3>
+                <Rating
+                  initialRating={overallRating}
+                  readonly
+                  emptySymbol={
+                    <span
+                      className="rating"
+                      style={{ width: "20px", height: "20px" }}
+                    />
+                  }
+                  fullSymbol={
+                    <span
+                      className="rating-full"
+                      style={{ width: "20px", height: "20px" }}
+                    />
+                  }
+                />
+                <h3>({overallRating}/5)</h3>
               </div>
               <p className="overall-ratings__description">
                 overall customer ratings

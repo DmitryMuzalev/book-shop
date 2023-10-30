@@ -146,5 +146,8 @@
 
   &__btn {
     align-self: start;
+    &:hover {
+      color: inherit;
+    }
   }
 }

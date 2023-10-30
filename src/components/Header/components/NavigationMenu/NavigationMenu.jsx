@@ -12,14 +12,14 @@ function NavigationMenu() {
 
   return (
     <nav className="nav-menu header__nav-menu">
-      <CustomLink className="nav-menu__link" to="/" onClick={handlerClickLink}>
+      <CustomLink className="nav-menu__link" to="/" cb={handlerClickLink}>
         Home
       </CustomLink>
 
       <CustomLink
         className="nav-menu__link"
         to="about-author"
-        onClick={handlerClickLink}
+        cb={handlerClickLink}
       >
         About
       </CustomLink>
@@ -29,7 +29,7 @@ function NavigationMenu() {
       <CustomLink
         className="nav-menu__link"
         to="contact-us"
-        onClick={handlerClickLink}
+        cb={handlerClickLink}
       >
         Contact
       </CustomLink>

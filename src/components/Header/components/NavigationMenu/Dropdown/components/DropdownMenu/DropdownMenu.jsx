@@ -50,7 +50,7 @@ function DropdownMenuColumn({ title, links }) {
           to={link.url}
           className="dropdown-menu__link"
           key={index}
-          onClick={() => {
+          cb={() => {
             !isTabletOrMobile
               ? dispatch(disableDropMenu())
               : dispatch(disableNavMenu());
