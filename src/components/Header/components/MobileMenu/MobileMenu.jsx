@@ -10,8 +10,10 @@ function MobileMenu({ isTabletOrMobile }) {
   const dispatch = useDispatch();
 
   const refMobileMenu = useRef(null);
-  useClickOutside(refMobileMenu, () =>
-    isTabletOrMobile ? dispatch(disableNavMenu()) : null
+  useClickOutside(
+    refMobileMenu,
+    () => (isTabletOrMobile ? dispatch(disableNavMenu()) : null),
+    isShowNavMenu
   );
   return (
     <div

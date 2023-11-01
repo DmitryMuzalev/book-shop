@@ -1,8 +1,8 @@
 function AboutAuthorDetails({ quantityBooks, rating, awards }) {
   const details = {
-    ["books published"]: quantityBooks,
-    ["user reviews"]: rating,
-    ["best seller awards"]: awards,
+    "books published": quantityBooks,
+    "user reviews": rating,
+    "best seller awards": awards,
   };
 
   const detailsList = Object.keys(details);

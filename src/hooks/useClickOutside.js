@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 
-export const useClickOutside = (ref, cb) => {
+export const useClickOutside = (ref, cb, isOpenMenu) => {
   const handlerClick = (e) => {
-    if (ref.current && !ref.current.contains(e.target)) {
+    e.stopPropagation();
+    if (ref.current && !ref.current.contains(e.target) && isOpenMenu) {
       cb();
     }
   };

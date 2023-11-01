@@ -7,7 +7,10 @@ function ToggleDropdownMenu() {
   return (
     <div
       className="dropdown__toggle nav-menu__link"
-      onClick={() => dispatch(toggleDropMenu())}
+      onClick={(e) => {
+        e.stopPropagation();
+        dispatch(toggleDropMenu());
+      }}
     >
       <span>Pages</span>
       <FaAngleDown />

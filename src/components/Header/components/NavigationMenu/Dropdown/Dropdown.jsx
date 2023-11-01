@@ -12,8 +12,10 @@ function Dropdown() {
   const refDropdownMenu = useRef(null);
   const dispatch = useDispatch();
 
-  useClickOutside(refDropdownMenu, () =>
-    !isTabletOrMobile ? dispatch(disableDropMenu()) : null
+  useClickOutside(
+    refDropdownMenu,
+    () => (!isTabletOrMobile ? dispatch(disableDropMenu()) : null),
+    isShowDropMenu
   );
 
   return (

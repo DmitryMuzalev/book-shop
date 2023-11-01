@@ -1,13 +1,23 @@
 import { useForm } from "react-hook-form";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 import { useState } from "react";
+const { v4: uuidv4 } = require("uuid");
 
 function Subscription() {
   const { register, handleSubmit, reset } = useForm();
   const [isSubscribe, setIsSubscribe] = useState(false);
 
   const onSubmit = (data) => {
-    console.log(data);
+    fetch("http://localhost:3001/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: uuidv4(),
+        ...data,
+      }),
+    });
     setIsSubscribe((prev) => !prev);
     reset();
   };
