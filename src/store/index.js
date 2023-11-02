@@ -10,6 +10,7 @@ import partnersReducer from "./slices/partnersSlice";
 import testimonialReducer from "./slices/testimonialsSlice";
 import booksReducer from "./slices/booksSlice";
 import reasonsTrustReducer from "./slices/reasonsTrustSlice";
+import { dbApi } from "./api/dbApi";
 
 export default configureStore({
   reducer: {
@@ -23,9 +24,11 @@ export default configureStore({
     testimonial: testimonialReducer,
     books: booksReducer,
     reasonsTrust: reasonsTrustReducer,
+    [dbApi.reducerPath]: dbApi.reducer,
   },
+
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
-    }),
+    }).concat(dbApi.middleware),
 });

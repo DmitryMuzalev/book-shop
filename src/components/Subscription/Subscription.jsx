@@ -1,25 +1,23 @@
 import { useForm } from "react-hook-form";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
-import { useState } from "react";
+import { useAddSubscribeMutation } from "../../store/api/dbApi";
 const { v4: uuidv4 } = require("uuid");
 
 function Subscription() {
   const { register, handleSubmit, reset } = useForm();
-  const [isSubscribe, setIsSubscribe] = useState(false);
+  const [addSubscribe, { status, isLoading, isError, isFetching, isSuccess }] =
+    useAddSubscribeMutation();
 
-  const onSubmit = (data) => {
-    fetch("http://localhost:3001/subscribe", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: uuidv4(),
-        ...data,
-      }),
-    });
-    setIsSubscribe((prev) => !prev);
-    reset();
+  console.log(status, isLoading, isError, isFetching, isSuccess);
+
+  const onSubmit = async (data) => {
+    if (data) {
+      addSubscribe({ id: uuidv4(), ...data })
+        .unwrap()
+        .catch((error) => console.error("rejected", error));
+
+      reset();
+    }
   };
 
   return (
@@ -33,11 +31,19 @@ function Subscription() {
               edition at your fingertip with in a minute.
             </p>
           </SectionTitle>
+
           <div className="subscription__content-wrap">
-            {!isSubscribe ? (
+            {status === "rejected" || status === "fulfilled" ? (
+              <p className="subscription-form__success-message">
+                {status === "fulfilled"
+                  ? "Thank you! Your submission has been"
+                  : "Oops! Something went wrong while submitting the form."}
+              </p>
+            ) : (
               <div className="subscription__form">
                 <form
                   id="subscription-form"
+                  autoComplete="off"
                   className="subscription-form"
                   onSubmit={handleSubmit(onSubmit)}
                 >
@@ -50,14 +56,12 @@ function Subscription() {
                   <input
                     className="subscription-form__btn btn btn_large"
                     type="submit"
-                    value="Subscribe"
+                    value={
+                      status === "pending" ? "Please wait..." : "Subscribe"
+                    }
                   />
                 </form>
               </div>
-            ) : (
-              <p className="subscription-form__success-message">
-                Thank you! Your submission has been received!
-              </p>
             )}
           </div>
         </div>
