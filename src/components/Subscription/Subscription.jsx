@@ -5,10 +5,7 @@ const { v4: uuidv4 } = require("uuid");
 
 function Subscription() {
   const { register, handleSubmit, reset } = useForm();
-  const [addSubscribe, { status, isLoading, isError, isFetching, isSuccess }] =
-    useAddSubscribeMutation();
-
-  console.log(status, isLoading, isError, isFetching, isSuccess);
+  const [addSubscribe, { status }] = useAddSubscribeMutation();
 
   const onSubmit = async (data) => {
     if (data) {
@@ -36,7 +33,7 @@ function Subscription() {
             {status === "rejected" || status === "fulfilled" ? (
               <p className="subscription-form__success-message">
                 {status === "fulfilled"
-                  ? "Thank you! Your submission has been"
+                  ? "Thank you! Your submission has been received!"
                   : "Oops! Something went wrong while submitting the form."}
               </p>
             ) : (

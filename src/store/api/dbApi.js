@@ -11,7 +11,14 @@ export const dbApi = createApi({
         body,
       }),
     }),
+    addMessage: build.mutation({
+      query: (body) => ({
+        url: "messages",
+        method: "POST",
+        body,
+      }),
+    }),
   }),
 });
 
-export const { useAddSubscribeMutation } = dbApi;
+export const { useAddSubscribeMutation, useAddMessageMutation } = dbApi;

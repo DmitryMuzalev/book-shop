@@ -1,57 +1,34 @@
 {
   "subscribe": [
     {
-      "email": "muzalev771@yandex.ru",
-      "id": 1
-    },
-    {
-      "id": "dfdd2887-465d-4907-be12-0a2692f6bcf1",
-      "email": "muzal@mail.com"
-    },
-    {
-      "id": "1ebd2bb6-2a77-488e-83d7-6a88ae5d5cb3",
-      "email": "muzalev771@yandex.ru"
-    },
-    {
-      "id": "cfa58d6c-be44-42c4-b5ea-20bd0fd39f9c",
-      "email": "muzalev771@yandex.ru"
-    },
-    {
-      "id": "3b5aa44f-9f39-446d-a749-f773887461cf",
-      "email": "muzalev771@yandex.ru"
-    },
-    {
-      "id": "fed4ad5e-438b-4332-8eda-9ea55e39bfc5",
-      "email": "muzalev771@yandex.ru"
-    },
-    {
-      "id": "865693cf-4237-42b3-81d3-d5c7a4058a73",
-      "email": "muzalev771@yandex.ru"
-    },
-    {
-      "id": "26b71fd0-0981-4e8e-ad05-64420ff30005",
-      "email": "muzalev771@yandex.ru"
-    },
-    {
-      "id": "d7b3433a-3d4a-4f3d-a14f-8d0b6be2fe0a",
-      "email": "muzalev771@yandex.ru"
-    },
-    {
-      "id": "1433691f-9975-4286-b2c8-833237fa5bf6",
-      "email": "muzalev771@yandex.ru"
-    },
-    {
-      "id": "b68324c7-73e7-4fb4-8911-d8fde2d667bc",
-      "email": "muzalev771@yandex.ru"
-    },
-    {
-      "id": "7a8edfd1-3914-4b41-80cc-6074d9197c6a",
-      "email": "muza@mail.com"
-    },
-    {
-      "id": "88d375c5-6e94-4f99-914b-98db0adb8ffd",
-      "email": "asinc@mas.com"
+      "id": "aee218bc-c037-45a8-981e-905ba81773d1",
+      "email": "muzalev11@mail.com"
     }
   ],
-  "messages": []
+  "messages": [
+    {
+      "id": "69915c9c-5846-4069-8420-d2f215b86f88",
+      "name": "Dima",
+      "email": "muzalev@mai.com",
+      "phone": "+79184446569",
+      "body": "Hi, Super star!!",
+      "subscription": true
+    },
+    {
+      "id": "e407e378-329f-4694-a3b6-681ed7840489",
+      "name": "Dima",
+      "email": "muza@mail.com",
+      "phone": "+79188887878",
+      "body": "Hello world!",
+      "subscription": true
+    },
+    {
+      "id": "2525bad5-f1da-46c4-b131-c8b6f7c612f7",
+      "name": "asd",
+      "email": "asd@ma.com",
+      "phone": "+7777",
+      "body": "77777",
+      "subscription": true
+    }
+  ]
 }
