@@ -1,34 +1,4 @@
 {
-  "subscribe": [
-    {
-      "id": "aee218bc-c037-45a8-981e-905ba81773d1",
-      "email": "muzalev11@mail.com"
-    }
-  ],
-  "messages": [
-    {
-      "id": "69915c9c-5846-4069-8420-d2f215b86f88",
-      "name": "Dima",
-      "email": "muzalev@mai.com",
-      "phone": "+79184446569",
-      "body": "Hi, Super star!!",
-      "subscription": true
-    },
-    {
-      "id": "e407e378-329f-4694-a3b6-681ed7840489",
-      "name": "Dima",
-      "email": "muza@mail.com",
-      "phone": "+79188887878",
-      "body": "Hello world!",
-      "subscription": true
-    },
-    {
-      "id": "2525bad5-f1da-46c4-b131-c8b6f7c612f7",
-      "name": "asd",
-      "email": "asd@ma.com",
-      "phone": "+7777",
-      "body": "77777",
-      "subscription": true
-    }
-  ]
+  "subscribe": [],
+  "messages": []
 }

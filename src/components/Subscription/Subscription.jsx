@@ -1,20 +1,17 @@
 import { useForm } from "react-hook-form";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 import { useAddSubscribeMutation } from "../../store/api/dbApi";
-const { v4: uuidv4 } = require("uuid");
+import { onSubmitForm } from "../../functions";
+import { FormMessage } from "../Form/FormMessage/FormMessage";
 
 function Subscription() {
   const { register, handleSubmit, reset } = useForm();
+
   const [addSubscribe, { status }] = useAddSubscribeMutation();
 
   const onSubmit = async (data) => {
-    if (data) {
-      addSubscribe({ id: uuidv4(), ...data })
-        .unwrap()
-        .catch((error) => console.error("rejected", error));
-
-      reset();
-    }
+    onSubmitForm(data, addSubscribe);
+    status === "fulfilled" && reset();
   };
 
   return (
@@ -31,34 +28,26 @@ function Subscription() {
 
           <div className="subscription__content-wrap">
             {status === "rejected" || status === "fulfilled" ? (
-              <p className="subscription-form__success-message">
-                {status === "fulfilled"
-                  ? "Thank you! Your submission has been received!"
-                  : "Oops! Something went wrong while submitting the form."}
-              </p>
+              <FormMessage status={status} />
             ) : (
-              <div className="subscription__form">
-                <form
-                  id="subscription-form"
-                  autoComplete="off"
-                  className="subscription-form"
-                  onSubmit={handleSubmit(onSubmit)}
-                >
-                  <input
-                    className="subscription-form__input-email"
-                    type="email"
-                    placeholder="Your Email ID..."
-                    {...register("email", { required: true })}
-                  />
-                  <input
-                    className="subscription-form__btn btn btn_large"
-                    type="submit"
-                    value={
-                      status === "pending" ? "Please wait..." : "Subscribe"
-                    }
-                  />
-                </form>
-              </div>
+              <form
+                id="subscription-form"
+                autoComplete="off"
+                className="subscription-form"
+                onSubmit={handleSubmit(onSubmit)}
+              >
+                <input
+                  className="subscription-form__input-email"
+                  type="email"
+                  placeholder="Your Email ID..."
+                  {...register("email", { required: true })}
+                />
+                <input
+                  className="subscription-form__btn btn btn_large"
+                  type="submit"
+                  value={status === "pending" ? "Please wait..." : "Subscribe"}
+                />
+              </form>
             )}
           </div>
         </div>

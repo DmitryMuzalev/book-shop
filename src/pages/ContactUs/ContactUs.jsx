@@ -1,6 +1,6 @@
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
-import { Faq } from "./components/Faq/Faq";
 import { ContactForm } from "./components/ContactForm/ContactForm";
+import { Faq } from "./components/Faq/Faq";
 import { useSelector } from "react-redux";
 
 function ContactUs() {
@@ -36,7 +36,7 @@ function ContactUs() {
               <div className="keep-touch-detail">
                 <div className="keep-touch-detail-item">
                   <div className="keep-touch-detail-item__icon">
-                    <img src="./images/icons/home.svg" alt="home" />
+                    <img src="/images/icons/home.svg" alt="home" />
                   </div>
                   <div className="keep-touch-detail-item__content-wrap">
                     <h3 className="keep-touch-detail-item__title title_big">
@@ -47,7 +47,7 @@ function ContactUs() {
                 </div>
                 <div className="keep-touch-detail-item">
                   <div className="keep-touch-detail-item__icon">
-                    <img src="./images/icons/envelope.svg" alt="envelope" />
+                    <img src="/images/icons/envelope.svg" alt="envelope" />
                   </div>
                   <div className="keep-touch-detail-item__content-wrap">
                     <h3 className="keep-touch-detail-item__title title_big">
@@ -58,7 +58,7 @@ function ContactUs() {
                 </div>
                 <div className="keep-touch-detail-item">
                   <div className="keep-touch-detail-item__icon">
-                    <img src="./images/icons/phone-call.svg" alt="phone-call" />
+                    <img src="/images/icons/phone-call.svg" alt="phone-call" />
                   </div>
                   <div className="keep-touch-detail-item__content-wrap">
                     <h3 className="keep-touch-detail-item__title title_big">

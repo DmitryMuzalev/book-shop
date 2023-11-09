@@ -67,6 +67,8 @@ ul {
   --grey-middle: #dcdcdc;
   --grey-light: #dce1e9;
 
+  --red: #ff4242;
+
   //_Fonts:
   --f-family-primary: "Inter", sans-serif;
   --f-family-secondary: "Cardo", serif;
@@ -268,7 +270,7 @@ h6,
 @import "./components/Articles/Articles.scss";
 
 @import "./components/PreviewAuthorsBook/PreviewAuthorsBook.scss";
-
+@import "./components/Form/Form.scss";
 @import "./components/Subscription/Subscription.scss";
 @import "./components/Partners/Partners.scss";
 @import "./components/Accordion/Accordion.scss";

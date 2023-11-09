@@ -1,6 +1,10 @@
 import { useForm } from "react-hook-form";
 import { useAddMessageMutation } from "../../../../store/api/dbApi";
-const { v4: uuidv4 } = require("uuid");
+import { onSubmitForm } from "../../../../functions";
+import { FormMessage } from "../../../../components/Form/FormMessage/FormMessage";
+
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+import { Input } from "../../../../components/Form/Input/Input";
 
 function ContactForm() {
   const { register, handleSubmit, reset } = useForm();
@@ -8,22 +12,22 @@ function ContactForm() {
   const [addMessage, { status }] = useAddMessageMutation();
 
   const onSubmit = async (data) => {
-    if (data) {
-      addMessage({ id: uuidv4(), ...data })
-        .unwrap()
-        .catch((error) => console.error("rejected", error));
-      reset();
+    onSubmitForm(data, addMessage);
+    status === "fulfilled" && reset();
+  };
+
+  const normalizePhoneNumber = (value) => {
+    const phoneNumber = parsePhoneNumberFromString(value);
+    if (!phoneNumber) {
+      return value;
     }
+    return phoneNumber.formatInternational();
   };
 
   return (
     <div className="contact-us__form-wrap">
       {status === "rejected" || status === "fulfilled" ? (
-        <p className="subscription-form__success-message">
-          {status === "fulfilled"
-            ? "Thank you! Your submission has been received!"
-            : "Oops! Something went wrong while submitting the form."}
-        </p>
+        <FormMessage status={status} />
       ) : (
         <div className="contact-us__form">
           <form
@@ -56,6 +60,13 @@ function ContactForm() {
                 />
               </div>
             </div>
+            <Input
+              type="text"
+              placeholder="Phone"
+              register={register}
+              name="test"
+              error={true}
+            />
             <div className="contact-form-field">
               <div className="contact-form-field__icon">
                 <img src="./images/icons/phone.svg" alt="phone" />
@@ -64,9 +75,14 @@ function ContactForm() {
                 type="tel"
                 className="contact-form-field__item input-field"
                 placeholder="Phone"
-                {...register("phone", { required: true })}
+                {...register("phone", {
+                  required: true,
+                  onChange: (e) =>
+                    (e.target.value = normalizePhoneNumber(e.target.value)),
+                })}
               />
             </div>
+
             <div className="contact-form-field">
               <div className="contact-form-field__icon textarea-field-icon">
                 <img src="./images/icons/edit.svg" alt="edit" />
@@ -90,6 +106,7 @@ function ContactForm() {
                 email
               </span>
             </label>
+
             <input
               type="submit"
               className="btn contact-form__btn"

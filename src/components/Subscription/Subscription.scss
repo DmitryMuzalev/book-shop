@@ -20,9 +20,6 @@
       margin-top: 30px;
     }
   }
-
-  &__form {
-  }
 }
 
 .subscription-form {
@@ -55,16 +52,6 @@
     &:hover {
       color: var(--blue);
       background-color: transparent;
-    }
-  }
-
-  &__success-message {
-    padding: toEm(20, 19);
-    text-align: center;
-    background-color: var(--blue);
-    color: var(--white);
-    @media (max-width: 479px) {
-      flex-direction: column;
     }
   }
 }
