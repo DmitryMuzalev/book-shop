@@ -1,27 +1,24 @@
 import { useForm } from "react-hook-form";
 import { useAddMessageMutation } from "../../../../store/api/dbApi";
-import { onSubmitForm } from "../../../../functions";
+import { onSubmitForm, normalizePhoneNumber } from "../../../../functions";
 import { FormMessage } from "../../../../components/Form/FormMessage/FormMessage";
-
-import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { Input } from "../../../../components/Form/Input/Input";
 
 function ContactForm() {
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    clearErrors,
+    formState: { errors },
+    reset,
+  } = useForm({ mode: "onBlur" });
 
   const [addMessage, { status }] = useAddMessageMutation();
 
   const onSubmit = async (data) => {
+    console.log(data);
     onSubmitForm(data, addMessage);
     status === "fulfilled" && reset();
-  };
-
-  const normalizePhoneNumber = (value) => {
-    const phoneNumber = parsePhoneNumberFromString(value);
-    if (!phoneNumber) {
-      return value;
-    }
-    return phoneNumber.formatInternational();
   };
 
   return (
@@ -61,11 +58,17 @@ function ContactForm() {
               </div>
             </div>
             <Input
-              type="text"
+              type="tel"
               placeholder="Phone"
               register={register}
               name="test"
-              error={true}
+              icon={"phone"}
+              error={!!errors.test}
+              errorMessage={errors?.test?.message}
+              onClick={() => clearErrors("test")}
+              onChange={(e) =>
+                (e.target.value = normalizePhoneNumber(e.target.value))
+              }
             />
             <div className="contact-form-field">
               <div className="contact-form-field__icon">

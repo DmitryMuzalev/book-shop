@@ -1,35 +1,41 @@
 import clsx from "clsx";
+import { validationPhoneNumber } from "../../../validation";
 
 function Input({
   type = "text",
   name,
   register,
   placeholder,
+  errorMessage,
   icon = null,
   error = null,
+  ...props
 }) {
-  const inputClasses = clsx(
-    "form-field__input",
-    error && "form-field__input_error"
-  );
+  const fieldClasses = clsx("form-field", error && "form-field_error");
 
   return (
-    <div className="form-field">
-      <input
-        className={inputClasses}
-        style={{
-          paddingLeft: icon ? "50px" : "20px",
-          background: icon ? `url(${icon}) no-repeat 12px 50%` : "none",
-        }}
-        type={type}
-        placeholder={placeholder}
-        {...register(name)}
-      />
-      {error && (
-        <div className="form-field__error-message">
-          Поле обязательно для заполнения
-        </div>
-      )}
+    <div className={fieldClasses}>
+      <div className="form-field__wrap">
+        {icon && (
+          <div className="form-field__icon">
+            <i className={`form-icons-${icon}`}></i>
+          </div>
+        )}
+        <input
+          className="form-field__input"
+          style={{
+            paddingLeft: icon ? "50px" : "20px",
+          }}
+          type={type}
+          placeholder={placeholder}
+          {...register(name, {
+            required: "Required field!",
+            validate: (v) => validationPhoneNumber(v),
+          })}
+          {...props}
+        />
+      </div>
+      {error && <div className="form-field__error-message">{errorMessage}</div>}
     </div>
   );
 }

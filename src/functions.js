@@ -1,4 +1,6 @@
-const { v4: uuidv4 } = require("uuid");
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+
+import { v4 as uuidv4 } from "uuid";
 
 const dateFormat = (date) => {
   const USDate = new Intl.DateTimeFormat("en-US", {
@@ -17,4 +19,12 @@ const onSubmitForm = async (data, cb) => {
   }
 };
 
-export { dateFormat, onSubmitForm };
+const normalizePhoneNumber = (number) => {
+  const phoneNumber = parsePhoneNumberFromString(number);
+  if (!phoneNumber) {
+    return number;
+  }
+  return phoneNumber.formatInternational();
+};
+
+export { dateFormat, onSubmitForm, normalizePhoneNumber };

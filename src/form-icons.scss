@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "form-icons";
+  src: url("../public/fonts/form-icons/form-icons.eot?84dy7v");
+  src: url("../public/fonts/form-icons/form-icons.eot?84dy7v#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/form-icons/form-icons.ttf?84dy7v") format("truetype"),
+    url("../public/fonts/form-icons/form-icons.woff?84dy7v") format("woff"),
+    url("../public/fonts/form-icons/form-icons.svg?84dy7v#form-icons")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="form-icons-"],
+[class*=" form-icons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "form-icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.form-icons-phone:before {
+  content: "\e900";
+}
+.form-icons-edit:before {
+  content: "\e901";
+}
+.form-icons-mail:before {
+  content: "\e902";
+}
+.form-icons-user:before {
+  content: "\e903";
+}
